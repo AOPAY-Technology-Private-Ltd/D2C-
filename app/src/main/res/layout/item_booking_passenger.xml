@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp">
+
+    <TextView
+        android:id="@+id/passengerName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Annu Satija"
+        android:fontFamily="@font/roboto_bold"
+        android:textColor="@color/edtsubblack"
+        android:textSize="15sp"
+        android:paddingVertical="5dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/viewlayout"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_marginTop="3dp"
+        android:layerType="software"
+        android:src="@drawable/dottedline"
+        app:layout_constraintTop_toBottomOf="@+id/passengerName"/>
+
+    <LinearLayout
+        android:id="@+id/detailslayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/viewlayout">
+
+        <TextView
+            android:id="@+id/age"
+            android:layout_weight=".5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@+id/passengerName"
+            app:layout_constraintBottom_toBottomOf="@+id/passengerName"
+            app:layout_constraintRight_toLeftOf="@+id/seatnumber"
+            app:layout_constraintRight_toRightOf="parent"
+            android:paddingVertical="5dp"
+            android:layout_marginRight="10dp"
+            android:textSize="13sp"
+            android:text="25 yr"/>
+
+        <TextView
+            android:id="@+id/gender"
+            android:layout_weight=".5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@+id/passengerName"
+            app:layout_constraintBottom_toBottomOf="@+id/passengerName"
+            app:layout_constraintRight_toLeftOf="@+id/seatnumber"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="10dp"
+            android:paddingVertical="5dp"
+            android:textSize="13sp"
+            android:gravity="center"
+            android:text="Female"/>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingVertical="5dp"
+            android:gravity="right">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="💺 Seat"
+                android:layout_marginRight="3dp"
+                android:textSize="14sp"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="@color/edtblack"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/seatnumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@+id/passengerName"
+                app:layout_constraintBottom_toBottomOf="@+id/passengerName"
+                app:layout_constraintRight_toRightOf="parent"
+                android:textSize="13sp"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:text="10U"/>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/viewdashlayout"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/grey"
+        app:layout_constraintTop_toBottomOf="@+id/detailslayout"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

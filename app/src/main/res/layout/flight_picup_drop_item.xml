@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/toptitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="10dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/airlineicon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/airindia" />
+
+        <TextView
+            android:id="@+id/airlinename"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Air India |"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/flightnumberwithcode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/roboto_regular"
+            android:text=" AI 2999"
+            android:textColor="@color/black"
+            android:textSize="10sp" />
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mainlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:paddingHorizontal="7dp"
+        app:layout_constraintTop_toBottomOf="@+id/toptitle">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/pickupicon"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_marginTop="10dp"
+            android:alpha=".4"
+            app:cardBackgroundColor="@color/edtsubblack"
+            app:cardCornerRadius="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/view_line"
+            android:layout_width="2dp"
+            android:layout_height="0dp"
+            android:background="@color/disablebuttoncolor"
+            app:layout_constraintBottom_toTopOf="@id/layovericon"
+            app:layout_constraintEnd_toEndOf="@id/pickupicon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pickupicon" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layovericon"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/droppointicon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_line">
+
+            <LinearLayout
+                android:id="@+id/layoverdot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:alpha=".4"
+                    app:cardBackgroundColor="@color/edtsubblack"
+                    app:cardCornerRadius="16dp" />
+
+            </LinearLayout>
+
+
+            <View
+                android:id="@+id/dash_view"
+                android:layout_width="2dp"
+                android:layout_height="0dp"
+                android:alpha=".7"
+                android:background="@drawable/vertical_dashline"
+                android:backgroundTint="@color/edtblack"
+                app:layout_constraintTop_toBottomOf="@id/layoverdot"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <ImageView
+            android:id="@+id/droppointicon"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:alpha=".7"
+            android:paddingHorizontal="2dp"
+            android:scaleType="centerInside"
+            android:visibility="gone"
+            android:src="@drawable/locationicon"
+            app:layout_constraintEnd_toEndOf="@+id/pickupicon"
+            app:layout_constraintBottom_toBottomOf="@+id/droplayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:tint="@color/edtsubblack" />
+
+
+        <LinearLayout
+            android:id="@+id/pickuplayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:orientation="vertical"
+            app:layout_constraintLeft_toRightOf="@+id/pickupicon"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/origintime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="21:45"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:id="@+id/origincityname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Delhi"
+                    android:textColor="@color/edtsubblack"
+                    android:textSize="13sp" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="7dp"
+                    android:layout_height="7dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="4dp"
+                    app:cardBackgroundColor="@color/inputtext_boxstroke"
+                    app:cardCornerRadius="14dp" />
+
+                <TextView
+                    android:id="@+id/originterminal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="Terminal T3"
+                    android:textColor="@color/edtsubblack"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/origindate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Wed,2 Jul 25"
+                    android:textSize="10sp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:layout_marginLeft="4dp"/>
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/durationlayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/droplayout"
+            app:layout_constraintLeft_toRightOf="@id/pickupicon"
+            app:layout_constraintTop_toBottomOf="@+id/pickuplayout">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Duration"
+                android:textColor="@color/footer_unselected"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/durationtime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="3dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="2h 15 m"
+                android:textColor="@color/footer_unselected"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/droplayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            app:layout_constraintLeft_toRightOf="@id/pickupicon"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/durationlayout">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/destinationtime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="21:45"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:id="@+id/destinationcityname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Delhi"
+                    android:textColor="@color/edtsubblack"
+                    android:textSize="13sp" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="7dp"
+                    android:layout_height="7dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="4dp"
+                    app:cardBackgroundColor="@color/inputtext_boxstroke"
+                    app:cardCornerRadius="14dp" />
+
+                <TextView
+                    android:id="@+id/destinationterminal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="Terminal T3"
+                    android:textColor="@color/edtsubblack"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/destinationdate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Wed,2 Jul 25"
+                    android:textSize="10sp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:layout_marginLeft="4dp"/>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <RelativeLayout
+        android:id="@+id/planechangeLayoverlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@color/travelcardcolor"
+        app:layout_constraintTop_toBottomOf="@+id/mainlayout">
+
+        <ImageView
+            android:id="@+id/planeicon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_margin="4dp"
+            android:src="@drawable/flighticon" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/planeicon">
+
+            <TextView
+                android:id="@+id/msgforchangeplane"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/changeplane"
+                android:textColor="@color/edtblack"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/layovertime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5 hrs 15 mins"
+                android:textSize="12sp"
+                android:layout_marginLeft="3dp"
+                android:textColor="@color/edtblack"
+                android:fontFamily="@font/roboto_bold"/>
+
+            <TextView
+                android:id="@+id/showingmsgforchnageplane"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:text=" Layover at "
+                android:textColor="@color/edtblack"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/layoverPlace"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ahmedabad"
+                android:textSize="12sp"
+                android:textColor="@color/edtblack"
+                android:fontFamily="@font/roboto_bold"/>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

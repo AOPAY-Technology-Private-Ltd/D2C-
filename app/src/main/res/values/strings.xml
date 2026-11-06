@@ -1,0 +1,351 @@
+<resources>
+    <string name="app_name">BosPay</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="onlyTextPattern">abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+    <string name="onlyNumbericPattern">0123456789</string>
+
+    <string name="lorem_ipsum">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
+        volutpat, dolor id interdum ullamcorper, risus dolor egestas lectus, sit amet mattis purus
+        dui nec risus. Maecenas non sodales nisi, vel dictum dolor. Class aptent taciti sociosqu ad
+        litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse blandit eleifend
+        diam, vel rutrum tellus vulputate quis. Aliquam eget libero aliquet, imperdiet nisl a,
+        ornare ex. Sed rhoncus est ut libero porta lobortis. Fusce in dictum tellus.\n\n
+        Suspendisse interdum ornare ante. Aliquam nec cursus lorem. Morbi id magna felis. Vivamus
+        egestas, est a condimentum egestas, turpis nisl iaculis ipsum, in dictum tellus dolor sed
+        neque. Morbi tellus erat, dapibus ut sem a, iaculis tincidunt dui. Interdum et malesuada
+        fames ac ante ipsum primis in faucibus. Curabitur et eros porttitor, ultricies urna vitae,
+        molestie nibh. Phasellus at commodo eros, non aliquet metus. Sed maximus nisl nec dolor
+        bibendum, vel congue leo egestas.\n\n
+        Sed interdum tortor nibh, in sagittis risus mollis quis. Curabitur mi odio, condimentum sit
+        amet auctor at, mollis non turpis. Nullam pretium libero vestibulum, finibus orci vel,
+        molestie quam. Fusce blandit tincidunt nulla, quis sollicitudin libero facilisis et. Integer
+        interdum nunc ligula, et fermentum metus hendrerit id. Vestibulum lectus felis, dictum at
+        lacinia sit amet, tristique id quam. Cras eu consequat dui. Suspendisse sodales nunc ligula,
+        in lobortis sem porta sed. Integer id ultrices magna, in luctus elit. Sed a pellentesque
+        est.\n\n
+        Aenean nunc velit, lacinia sed dolor sed, ultrices viverra nulla. Etiam a venenatis nibh.
+        Morbi laoreet, tortor sed facilisis varius, nibh orci rhoncus nulla, id elementum leo dui
+        non lorem. Nam mollis ipsum quis auctor varius. Quisque elementum eu libero sed commodo. In
+        eros nisl, imperdiet vel imperdiet et, scelerisque a mauris. Pellentesque varius ex nunc,
+        quis imperdiet eros placerat ac. Duis finibus orci et est auctor tincidunt. Sed non viverra
+        ipsum. Nunc quis augue egestas, cursus lorem at, molestie sem. Morbi a consectetur ipsum, a
+        placerat diam. Etiam vulputate dignissim convallis. Integer faucibus mauris sit amet finibus
+        convallis.\n\n
+        Phasellus in aliquet mi. Pellentesque habitant morbi tristique senectus et netus et
+        malesuada fames ac turpis egestas. In volutpat arcu ut felis sagittis, in finibus massa
+        gravida. Pellentesque id tellus orci. Integer dictum, lorem sed efficitur ullamcorper,
+        libero justo consectetur ipsum, in mollis nisl ex sed nisl. Donec maximus ullamcorper
+        sodales. Praesent bibendum rhoncus tellus nec feugiat. In a ornare nulla. Donec rhoncus
+        libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
+        vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
+    </string>
+
+    <string name="log_in_to_bos_pay">Log in to BOS Pay</string>
+    <string name="we_will_create_an_account_if_you_dont_have_one">We will create an account if you dont have one</string>
+    <string name="enter_mobile_number">Enter Mobile Number</string>
+    <string name="enter_email_id">Enter Email ID</string>
+    <string name="proceed">Proceed</string>
+    <string name="verify_otp">Verify OTP</string>
+    <string name="enter_otp">Enter OTP</string>
+    <string name="wallet_pay">Wallet \nPay</string>
+    <string name="to_self_account">To Self \naccount</string>
+    <string name="pay_anyone">Pay \nanyone</string>
+    <string name="transaction_history">Transaction \nHistory</string>
+    <string name="transactiontitlehistory">Transaction History</string>
+    <string name="recharge_and_bills">Recharge &amp;  Bills</string>
+    <string name="travel_transit">Travel &amp; Transit</string>
+    <string name="recharge">Recharge</string>
+    <string name="electricity">Electricity</string>
+    <string name="get_assured_rewards_on_your_first_bill_payment">Get assured rewards on your first bill payment</string>
+    <string name="emi">EMI \n</string>
+    <string name="credit_card_bill">Credit Card \nBill</string>
+    <string name="municipal_tax">Municipal \nTax</string>
+    <string name="insurance">Insurance \n</string>
+    <string name="financial_services">Financial Services</string>
+    <string name="bus">Bus</string>
+    <string name="flight">Flight</string>
+    <string name="train">Train</string>
+    <string name="hotel">Hotel</string>
+    <string name="book_tickets_on_the_go">Book tickets on the  go !!</string>
+    <string name="view_refund_cancellation_policy">View Refund &amp; Cancellation Policy</string>
+    <string name="logout">Logout</string>
+    <string name="screen_lock">Screen Lock</string>
+    <string name="setting">Settings</string>
+    <string name="security">Security</string>
+    <string name="help_and_support">Help &amp; Support</string>
+    <string name="about_us">About Us</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="profile">Profile</string>
+    <string name="edit_name_contact_info_and_address">Edit name,Contact info &amp; Address</string>
+    <string name="employment_details_pan_details_income">Employment details , PAN Details, Income</string>
+    <string name="age_gender_address">Gender,Marital Status,Qualification</string>
+    <string name="financial_details">Financial Details</string>
+    <string name="verify_your_pan_details_once_to_enjoy_seamless_and_personalized_recommendations">Verify your PAN details once to enjoy seamless and personalized recommendations.</string>
+    <string name="i_agree_to_the_terms_and_conditions">I agree to the terms and conditions</string>
+    <string name="manage_data">Manage Data</string>
+    <string name="this_data_would_be_used_to_provide_with_seamless_and_personalized_services_from_bos">This data would be used to provide with seamless and personalized services from BOS Pay.</string>
+    <string name="gender">Gender</string>
+    <string name="question_1_of_4">Question 1 of 4</string>
+    <string name="question_2_of_4">Question 2 of 4</string>
+    <string name="question_3_of_4">Question 3 of 4</string>
+    <string name="question_4_of_4">Question 4 of 4</string>
+    <string name="the_information_will_be_used_for_personalizing_your_experience_and_services_across_bos_pay">The information will be used for personalizing your experience &amp; services across BOS Pay</string>
+    <string name="which_gender_do_you_indetify_with">Which gender do you identify with ?</string>
+    <string name="marital_status">Marital Status</string>
+    <string name="education_qualification">Education Qualification</string>
+    <string name="family_members">Family Members</string>
+    <string name="what_is_your_current_marital_status">What is your current marital status ?</string>
+    <string name="please_tell_us_your_education_qualification">Please tell us your education qualification</string>
+    <string name="how_do_you_live_with">How do you live with?</string>
+    <string name="what_is_your_heightest_education_qualification">What is your heightest education qualification ?</string>
+    <string name="post_graduate">Post Graduate</string>
+    <string name="children">Children</string>
+    <string name="completed">Completed</string>
+    <string name="help_center">Help Center</string>
+    <string name="additional_details">Additional Details</string>
+    <string name="view_all_chats_with_support">View all chats with support</string>
+    <string name="recommended_videos">Recommended Videos</string>
+    <string name="topup_your_wallet">How to Top-Up your Wallet?</string>
+    <string name="easily_add_money">Easily add money to your BOSPay wallet using UPI, debit card, credit card, or net banking.
+    Go to Wallet → Top-Up, enter the amount, choose a payment method, and confirm. The amount will be instantly reflected in your wallet.</string>
+    <string name="raistickettitle"> How to Raise a Ticket?</string>
+    <string name="raisetickettxt"><![CDATA[If you face any issue, you can raise a support ticket directly from the app. Go to Help & Support → Raise a Ticket, select the issue category, add details, and submit. Our support team will assist you shortly.]]></string>
+    <string name="promocode">How Cashback / Promo Codes Work on BOSPay?</string>
+    <string name="offerpromocode">BOSPay offers cashback and promo codes on selected transactions. Apply the promo code during payment to avail instant discounts or cashback, which will be credited to your wallet as per the offer terms.</string>
+    <string name="qrcodetitle">How is a QR Code Generated?</string>
+    <string name="uniqueqrcode">A unique QR code is automatically generated for secure and fast payments. Simply enter the amount and generate the QR code, which can be scanned to complete the transaction instantly.</string>
+    <string name="travelbooking">How to Cancel My Travel Bookings?</string>
+    <string name="travelpolicy">You can cancel your travel bookings directly from the app. Go to My Bookings, select the booking you want to cancel, and follow the cancellation process. Refunds (if applicable) will be processed as per the policy.</string>
+    <string name="transactionhistory">You can view all your past transactions in one place. Go to Transaction History to see detailed records of payments, wallet top-ups, refunds, and cashback.</string>
+    <string name="transactiontitle">How to Check Transaction History?</string>
+    <string name="need_further_assistance">Need further assistance</string>
+    <string name="we_are_happy_to_help_you">We are happy to help you</string>
+    <string name="my_tickets">My tickets</string>
+    <string name="get_help_for_a_transaction">Get help for a transaction</string>
+    <string name="transactionnotfoundmsg">You have not made any \ntransactions yet</string>
+    <string name="ticketnotfoundmsg">You haven’t raised any \ntickets yet.</string>
+    <string name="bookedticketmsg">You haven’t booked \nany tickets yet.</string>
+    <string name="you_re_all_caught_up_for_now">You haven’t received any\n notifications yet.</string>
+    <string name="gas_bill">Gas Bill</string>
+    <string name="fasttag">FastTag</string>
+    <string name="dth">DTH</string>
+    <string name="broadband">Broadband</string>
+    <string name="skip">Skip</string>
+    <string name="getstarted">Get Started</string>
+    // onboarding msg...................................................
+
+    <string name="onboardingmsg1">Manage your everyday payments, recharges, bill payments, and travel bookings—all in one secure and seamless platform designed for your convenience.\n</string>
+    <string name="onboardingmsg2">Recharge your mobile, pay utility bills, FASTag, credit cards, and more with just a few taps. Fast, reliable, and hassle-free transactions every time.\n</string>
+    <string name="onboardingmsg3">Book flights, buses, and other travel services effortlessly. Enjoy smooth bookings, secure payments, and complete control over your journeys and transactions.</string>
+
+    <string name="onboardingtitle1">One App, Multiple Services</string>
+    <string name="onboardingtitle2">Pay, Recharge &amp; Manage Bills Easily</string>
+    <string name="onboardingtitle3">Book Your Travel with Confidence</string>
+    <string name="journey_date">Journey Date</string>
+    <string name="best_price_guarantee">Best Price\nGuarantee</string>
+    <string name="multiple_routes">Multiple\nRoutes</string>
+    <string name="_24x7_support">24x7\nSupport</string>
+    <string name="live_bus_tracking">Live Bus\nTracking</string>
+    <string name="popular_cities">POPULAR CITIES</string>
+    <string name="search_by_city">Search by city</string>
+    <string name="leaving_from">Leaving From</string>
+    <string name="going_to">Going to</string>
+    <string name="edit">Edit</string>
+    <string name="searchbusmsg">Finding the best buses \nfor your trip…</string>
+    <string name="searchflightmsg">Finding the best flight \nfor your trip…</string>
+    <string name="notsearchbusmsg">Sorry, we couldn\'t find any buses \nfor this trip…</string>
+    <string name="notsearchflightmsg">Sorry, we couldn\'t find any flight \nfor this trip…</string>
+    <string name="offerswomen">Offers for women</string>
+    <string name="Before_6">Early Morning</string>
+    <string name="am_6_pm_12">Morning Departure</string>
+    <string name="pm_12_pm_6">Noon Departure</string>
+    <string name="after_6_pm">Evening Departure</string>
+    <string name="popular_filters">Popular Filters</string>
+    <string name="boarding_and_dropping_points">Pick &amp; Drop Points</string>
+    <string name="amentities_you_will_get">Amentities</string>
+    <string name="bus_type">Bus Type</string>
+    <string name="flight_type">Flight Type</string>
+    <string name="bus_departure">Departure</string>
+    <string name="bus_operator">Bus Operator</string>
+    <string name="airlines">Airlines</string>
+    <string name="filter_your_bus">Filter Your Bus</string>
+    <string name="boarding_point">Boarding Point</string>
+    <string name="filters">Filters</string>
+    <string name="sortfilters">Sort &amp; Filters</string>
+    <string name="filterflighttype">Filter by Flight Type</string>
+    <string name="depart">DEPARTURE</string>
+    <string name="filterclear">Clear All Filter</string>
+    <string name="filterflight">Filter Your Flight</string>
+    <string name="departuredate">DEPARTURE DATE</string>
+    <string name="fromcity">FROM</string>
+    <string name="tocity">TO</string>
+    <string name="show_buses">Show Buses</string>
+    <string name="finding_your_seat">Finding your seat…</string>
+    <string name="not_found_seat">No Seat available</string>
+
+    <string name="available_seat">Available</string>
+    <string name="female_available_seat">Female</string>
+
+    <string name="selected_seat">Selected</string>
+    <string name="female_selected_seat">Female Selected</string>
+
+    <string name="booked_seat">Booked</string>
+    <string name="female_booked_seat">Female Booked</string>
+    <string name="select_seat">Select Seat</string>
+    <string name="pickup_points">Pickup Points</string>
+    <string name="drop_points">Drop points</string>
+    <string name="pickup_point">Pickup Point</string>
+    <string name="drop_point">Drop Point</string>
+    <string name="added">ADDED</string>
+    <string name="save_this_detail_for_future_bookings">Save this detail for future bookings</string>
+    <string name="remove_from_passenger_list">Remove from passenger list</string>
+    <string name="this_will_permanently_remove_their_details_from_the_saved_passengers_list">This will permanently remove their details from the saved passengers list.</string>
+    <string name="continued">Continue</string>
+    <string name="enter_contact">Enter contact details to get ticket</string>
+    <string name="offers">Offers</string>
+    <string name="cancellation_policy">Cancellation Policy</string>
+    <string name="total_fare">Total Fare</string>
+    <string name="fare_breakup">Fare Breakup</string>
+    <string name="confirm_booking">Confirm Booking</string>
+    <string name="time_of_cancellation">Time of Cancellation</string>
+    <string name="cancellation_policy_msg">
+  Refund varies by cancellation time. Up to <b style="color: #000000;">90%</b> / <b style="color: #000000;">75%</b> / <b style="color: #000000;">50%</b> before departure. No refund after departure. Operator rules apply.
+   </string>
+    <string name="cancellation_charges">Cancellation charges and refund amounts are determined by the respective bus operator. The displayed refund is indicative and subject to <b style="color: #000000;">operator rules, service charges, taxes, and applicable deductions.</b></string>
+    <string name="one_way">One Way</string>
+    <string name="round_trip">Round Trip</string>
+    <string name="travellers_and_cabin_class">Travellers &amp; Cabin Class</string>
+    <string name="special_fares_optional">Special Fares (optional)</string>
+    <string name="selectclass">Select Travellers &amp; Class </string>
+    <string name="numbertravellers">ADD NUMBER OF TRAVELLERS </string>
+    <string name="adult">Adult </string>
+    <string name="adultage">12 yrs &amp; above </string>
+    <string name="ontheway">on the day of travel </string>
+    <string name="childage">2-12 yrs</string>
+    <string name="infant">Infant</string>
+    <string name="infantage">Under 2 yrs</string>
+    <string name="chooseclass">CHOOSE CABIN CLASS</string>
+    <string name="economy">ECONOMY</string>
+    <string name="preeconomy">PREMIUM ECONOMY</string>
+    <string name="business">BUSINESS</string>
+    <string name="first">FIRST CLASS</string>
+    <string name="done">Done</string>
+    <string name="fareoffermsg">Fare offered by airline</string>
+    <string name="cabinbag">Cabin bag</string>
+    <string name="checkin">Check - in</string>
+    <string name="meal">Meal</string>
+    <string name="booknow">BOOK NOW</string>
+    <string name="price">Price</string>
+    <string name="search_flights">Search Flights</string>
+    <string name="choose_airline">Choose Airline</string>
+    <string name="show_flights">Show Flights</string>
+    <string name="flightdetails">Flight Details</string>
+    <string name="changeplane">Change of planes</string>
+    <string name="continuee">CONTINUE</string>
+    <string name="make_payment">Make Payment</string>
+    <string name="add_passenger">Add Passenger</string>
+    <string name="flight_details">Flight Details</string>
+    <string name="ticketmsg">Your ticket SMS and email will be sent to this number</string>
+    <string name="choose_from_saved_list">Choose from Saved List or Add New passenger</string>
+    <string name="continfo">Contact information</string>
+    <string name="mailid">Email Id</string>
+    <string name="mob">Mobile Number</string>
+    <string name="cnfrm">CONFIRM</string>
+    <string name="farebreak">Fare Breakup</string>
+    <string name="basefaree">Base Fare</string>
+    <string name="taxes">Taxes and Surcharges</string>
+    <string name="airlinetaxes">Airline Taxes  and Surcharges</string>
+    <string name="passportno">Passport no</string>
+    <string name="passportcountryname">Passport issuing country name</string>
+    <string name="passportexpiredate">Passport expiry date (MM/DD/YYYY)</string>
+    <string name="select_payment_method">Select Payment Method</string>
+    <string name="wallet_top_up">Wallet Top Up</string>
+    <string name="insufficient_balance">Low Balance</string>
+    <string name="pay_via_wallet">Pay via wallet</string>
+    <string name="_100_secure_transaction">100% Secure Transaction</string>
+    <string name="pay">Pay</string>
+    <string name="add">Add</string>
+    <string name="update">Update</string>
+    <string name="editData">Passenger Edit Details</string>
+    <string name="your_payment">Your payment may not be completed.</string>
+    <string name="are_you_sure">Are you sure you want to go back?</string>
+    <string name="cancel_payment">Cancel Payment</string>
+    <string name="available_balance">Available Balance</string>
+    <string name="continues">Continue</string>
+    <string name="is_the_recommended"> is the recommended amount to make your next transaction</string>
+    <string name="defence_forces">Defence Forces</string>
+    <string name="valid_for_retired">Valid for retired or serving armed/parliamentary forces along with their relatives only. To avail this benefit, passengers must show a valid ID or dependent card before flight departure.</string>
+    <string name="special_fares">Special fares and extra baggage allowance are available exclusively for students aged 12 and above. To avail the benefit, students must carry valid ID cards and student visas (if needed) before the flight departure.</string>
+    <string name="senior_citizens_of_">Senior citizens of 60+ years are eligible for this benefit. To avail the offer, it is mandatory to have valid date of birth proof. Without proof, the passenger will be charged with fares.</string>
+    <string name="return_date">Return Date</string>
+    <string name="this_promo_code">This promo code is valid only for orders above ₹</string>
+    <string name="payment_methods">Payment Methods</string>
+    <string name="upi_cards">UPI,Cards,Wallet,Netbanking &amp; more</string>
+    <string name="_100_secure_payments">100 % secure payments</string>
+    <string name="select_an_offer_to_apply_cashback_or_discount">Select an offer to apply cashback or discount</string>
+    <string name="show_non_stop_flights_only">Show Non-stop flights only</string>
+    <string name="login_through_email">Login through Email</string>
+    <string name="login_through_mob">Login through Mobile</string>
+    <string name="enter_the_otp_you_received_on">Enter the OTP you received on</string>
+    <string name="are_you_sure_you_want_to_sign_out">Are you sure you want to sign out?</string>
+    <string name="downloadticket">DOWNLOAD TICKET</string>
+    <string name="flighttickettitle">For Any Support / Cancellation &amp; Refund Issue Call +91 1234567890 or Whatsapp at +91 1234567890 Email : help@boscenter.in </string>
+    <string name="ticketstatustitle">TICKET CONFIRMATION</string>
+    <string name="flightdetail">Flight Details</string>
+    <string name="passangerdetails">Passenger Details </string>
+    <string name="paymentdetails">Payment Details</string>
+    <string name="passangeremail">Email </string>
+    <string name="phone">( Phone</string>
+    <string name="flightmsg">ALL TIMINGS MENTIONED ARE IN 24HRS FORMAT AND LOCAL AIRPORT TIMINGS AT THE DEPARTURE/ARRIVAL AIRPORT.</string>
+    <string name="view_ticket">VIEW TICKET</string>
+    <string name="view_cancel">VIEW CANCEL</string>
+    <string name="travellers_information">Travellers Information</string>
+    <string name="please_make">Please make sure to check in before 1 hour. Carry a valid govt Id.</string>
+    <string name="confirmed">CONFIRMED</string>
+    <string name="download_e_ticket">Download E-Ticket</string>
+    <string name="share_e_ticket">Share E-Ticket</string>
+    <string name="bb20260327123456x9k8l7mnpq">BB20260327123\n456X9K8L7MNPQ\n456X9K8L7MNPQ</string>
+    <string name="travel_date">Travel Date</string>
+    <string name="kashmiri_gate_isbt">Kashmiri Gate Isbt Kashmiri Gate Isbt Kashmiri Gate Isbt</string>
+
+    <string name="pnr">PNR</string>
+    <string name="order">Order ID</string>
+    <string name="arrival">ARRIVAL</string>
+    <string name="bon">Bus Operator Name:</string>
+    <string name="boardpoint">Boarding Point:</string>
+    <string name="reporttime">Reporting Time:</string>
+    <string name="bstype">Bus Type:</string>
+    <string name="driverdetails">Driver Contact &amp; Vehicle Number:</string>
+    <string name="droppoint">Dropping Point:</string>
+    <string name="boardingtime">Boarding Time:</string>
+    <string name="ticketqr">Ticket QR</string>
+    <string name="traveldetails">Traveller Details</string>
+    <string name="namee">Name</string>
+    <string name="seatno">Seat No</string>
+    <string name="ticketnumber">Ticket Number</string>
+    <string name="farepayment">Fare &amp; Payment Details</string>
+    <string name="basefare">Base Fare (Traveller)</string>
+    <string name="gst">Operator GST</string>
+    <string name="othercharges">Other Charges</string>
+    <string name="convencfee">Convenience fees</string>
+    <string name="totalamt">Total Amount Paid</string>
+    <string name="no_bus_tickets_found_nplease_select_dates">No bus tickets found,\nPlease select dates</string>
+    <string name="note_if_you_proceed_with_cancellation_the_refundable_amount_will_be_0">Note:If you proceed with cancellation, the refundable amount will be ₹0</string>
+    <string name="do_you_want_to_proceed">Do you want to proceed?</string>
+    <string name="ticket_cancelled">Ticket Cancelled Successfully</string>
+    <string name="your_ticket">Your ticket has been successfully cancelled.</string>
+    <string name="the_refund">The refund amount will be credited to your wallet within 5–7 working days.</string>
+    <string name="my_bookings">My Bookings</string>
+    <string name="scan_any_qr_code_to_pay">Scan any QR code to pay</string>
+    <string name="position_your_phone_to_make_sure_the_qr_code_is_within_the_frame">Position your phone to make sure the QR code is within the frame.</string>
+    <string name="paying">Paying</string>
+    <string name="banking_name">Banking name:</string>
+    <string name="upi_id">UPI ID:</string>
+</resources>

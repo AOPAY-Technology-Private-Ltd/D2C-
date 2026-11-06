@@ -1,0 +1,757 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.view.activity.travel.AllBusModule.BusBookedTicketActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/bgcolor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/headerlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/backicon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:padding="4dp"
+            android:src="@drawable/backarrow"
+            android:visibility="invisible"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/black" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:text="Ticket successfully Booked "
+            android:textColor="@color/edtblack"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/backicon"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/backicon" />
+
+        <ImageView
+            android:id="@+id/homeicon"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:src="@drawable/homeicon"
+            android:layout_marginRight="16dp"
+            android:padding="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/headerlayout"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="20dp"
+                android:layout_marginHorizontal="20dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/detailcard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@id/ticketQRCode">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/topheaderlayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_ticket_gradient"
+                        android:paddingBottom="32dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/companyName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="20dp"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="Red Bus"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/confirmcard"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="20dp"
+                            app:cardCornerRadius="20dp"
+                            app:layout_constraintBottom_toBottomOf="@id/companyName"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/companyName">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="2dp"
+                                android:background="@drawable/confirmedback"
+                                android:paddingHorizontal="10dp"
+                                android:paddingVertical="4dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/roboto_medium"
+                                    android:text="@string/confirmed"
+                                    android:textColor="@color/white"
+                                    android:textSize="12sp" />
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:id="@+id/fromLocation"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/roboto_bold"
+                            android:gravity="left"
+                            android:text="Delhi"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            app:layout_constraintLeft_toLeftOf="@+id/companyName"
+                            app:layout_constraintTop_toBottomOf="@+id/companyName"
+                            app:layout_constraintRight_toLeftOf="@id/busicon"/>
+
+                        <TextView
+                            android:id="@+id/toLocation"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/roboto_bold"
+                            android:text="Lucknow"
+                            android:gravity="right"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            app:layout_constraintLeft_toRightOf="@+id/busicon"
+                            app:layout_constraintRight_toRightOf="@+id/confirmcard"
+                            app:layout_constraintTop_toBottomOf="@+id/confirmcard" />
+
+                        <RelativeLayout
+                            android:id="@+id/planlayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="15dp"
+                            app:layout_constraintTop_toBottomOf="@+id/toLocation">
+
+                            <TextView
+                                android:id="@+id/pointcircle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:fontFamily="@font/roboto_regular"
+                                android:padding="4dp"
+                                android:text="Departure"
+                                android:textColor="@color/white"
+                                android:textSize="13sp" />
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="12dp"
+                                android:layout_centerVertical="true"
+                                android:layout_toStartOf="@id/dotpoint"
+                                android:layout_toEndOf="@id/pointcircle"
+                                android:alpha=".6"
+                                android:src="@drawable/dottedline"
+                                app:tint="@color/white" />
+
+                            <TextView
+                                android:id="@+id/dotpoint"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:fontFamily="@font/roboto_regular"
+                                android:padding="4dp"
+                                android:text="Arrival"
+                                android:textColor="@color/white"
+                                android:textSize="13sp" />
+
+                        </RelativeLayout>
+
+                        <ImageView
+                            android:id="@+id/busicon"
+                            android:layout_width="80dp"
+                            android:layout_height="70dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            app:layout_constraintTop_toTopOf="@+id/planlayout"
+                            app:layout_constraintBottom_toBottomOf="@+id/planlayout"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            android:src="@drawable/busticketimage" />
+
+                        <TextView
+                            android:id="@+id/departureDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="11:20"
+                            android:textColor="@color/white"
+                            android:textSize="15sp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/busicon" />
+
+                        <TextView
+                            android:id="@+id/boardingPoint"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:alpha=".8"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="@string/kashmiri_gate_isbt"
+                            android:textColor="@color/white"
+                            android:textSize="13sp"
+                            android:gravity="left"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toLeftOf="@+id/travelDate"
+                            app:layout_constraintTop_toBottomOf="@id/departureDate" />
+
+                        <TextView
+                            android:id="@+id/arrivalDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="15dp"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="11:20"
+                            android:textColor="@color/white"
+                            android:textSize="15sp"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/busicon" />
+
+
+                        <TextView
+                            android:id="@+id/droppingPoint"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="15dp"
+                            android:alpha=".8"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="@string/kashmiri_gate_isbt"
+                            android:textColor="@color/white"
+                            android:textSize="13sp"
+                            android:gravity="right"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintLeft_toRightOf="@id/travelDate"
+                            app:layout_constraintTop_toBottomOf="@id/arrivalDate" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:id="@+id/traveldatetitle"
+                                android:layout_height="wrap_content"
+                                android:text="@string/travel_date"
+                                android:textSize="16sp"
+                                android:textColor="@color/white"
+                                android:gravity="center"
+                                android:fontFamily="@font/roboto_bold"
+                                app:layout_constraintRight_toLeftOf="@+id/arrivalDate"
+                                app:layout_constraintLeft_toRightOf="@+id/departureDate"
+                                app:layout_constraintTop_toBottomOf="@id/busicon" />
+
+                            <TextView
+                                android:id="@+id/travelDate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="29/04/2026"
+                                android:textSize="14sp"
+                                android:textColor="@color/white"
+                                android:fontFamily="@font/roboto_medium"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/traveldatetitle" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="12dp"
+                        android:layout_marginTop="-4dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/cardbottomdashimage"
+                        app:layout_constraintLeft_toLeftOf="@+id/centercard"
+                        app:layout_constraintRight_toRightOf="@+id/centercard"
+                        app:layout_constraintTop_toBottomOf="@+id/centercard" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/centercard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-20dp"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="20dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/topheaderlayout">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bookedticketcolorgradient"
+                            android:paddingBottom="7dp">
+
+                            <LinearLayout
+                                android:id="@+id/boardingdetailslayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:background="@drawable/editouterborder"
+                                android:elevation="10dp"
+                                android:orientation="vertical"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginHorizontal="5dp"
+                                    android:layout_gravity="center"
+                                    android:paddingVertical="5dp">
+
+                                    <ImageView
+                                        android:layout_width="35dp"
+                                        android:layout_height="35dp"
+                                        android:scaleType="centerCrop"
+                                        android:padding="3dp"
+                                        android:src="@drawable/locationnewicon"/>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical"
+                                        android:layout_marginLeft="5dp">
+
+                                        <TextView
+                                            android:id="@+id/boardingtxt"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/roboto_regular"
+                                            android:text="Operator Contact"
+                                            android:textColor="@color/primary_blue"
+                                            android:textSize="14sp"
+                                            app:layout_constraintLeft_toLeftOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent" />
+
+                                        <TextView
+                                            android:id="@+id/operatorName"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/roboto_regular"
+                                            android:text="GOLDLINE SUPER DELUXE (NON STOP)"
+                                            android:textColor="@color/edtblack"
+                                            android:textSize="10sp"
+                                            android:gravity="center"
+                                            app:layout_constraintLeft_toLeftOf="parent"
+                                            app:layout_constraintTop_toBottomOf="@+id/boardingtxt" />
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_marginHorizontal="10dp"
+                                    android:background="@color/grey"/>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginHorizontal="5dp"
+                                    android:layout_gravity="center"
+                                    android:paddingVertical="5dp">
+
+                                    <ImageView
+                                        android:id="@+id/bustypeicon"
+                                        android:layout_width="35dp"
+                                        android:layout_height="35dp"
+                                        android:scaleType="centerCrop"
+                                        android:padding="3dp"
+                                        android:src="@drawable/nonacbustype"/>
+
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical"
+                                        android:layout_marginLeft="5dp">
+
+                                        <TextView
+                                            android:id="@+id/classtxt"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/roboto_regular"
+                                            android:text="Bus Type"
+                                            android:textColor="@color/primary_blue"
+                                            android:textSize="14sp"
+                                            app:layout_constraintRight_toRightOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent" />
+
+                                        <TextView
+                                            android:id="@+id/bustypetxt"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/roboto_regular"
+                                            android:text="VOLVO 9600 Non-AC Seater/Sleeper (2 + 1)"
+                                            android:textColor="@color/edtblack"
+                                            android:textSize="10sp"
+                                            android:gravity="center"
+                                            app:layout_constraintRight_toRightOf="parent"
+                                            app:layout_constraintTop_toBottomOf="@+id/classtxt" />
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/passengertitle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:fontFamily="@font/roboto_bold"
+                                android:padding="4dp"
+                                android:text="PASSENGERS"
+                                android:textColor="@color/primary_blue"
+                                android:textSize="14sp"
+                                app:layout_constraintTop_toBottomOf="@+id/boardingdetailslayout" />
+
+                            <LinearLayout
+                                android:id="@+id/customerdetailslayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:padding="5dp"
+                                android:gravity="center"
+                                app:layout_constraintTop_toBottomOf="@+id/passengertitle">
+
+                                <TextView
+                                    android:id="@+id/customerName"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/roboto_bold"
+                                    android:text="Annu Satija"
+                                    android:paddingHorizontal="6dp"
+                                    android:textColor="@color/edtblack"
+                                    android:textSize="14sp"
+                                    android:gravity="center" />
+
+                                <TextView
+                                    android:id="@+id/customerContactdetails"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/roboto_regular"
+                                    android:text="8765347263 | abcd@gmail.com"
+                                    android:textColor="@color/edtblack"
+                                    android:textSize="12sp"
+                                    android:paddingHorizontal="6dp"
+                                    android:paddingVertical="4dp"
+                                    android:gravity="center" />
+
+                            </LinearLayout>
+
+                            <View
+                                android:id="@+id/viewcustomer"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/grey"
+                                android:layout_marginHorizontal="10dp"
+                                app:layout_constraintTop_toBottomOf="@+id/customerdetailslayout"/>
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/passengerdetailslayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="10dp"
+                                android:layout_marginTop="5dp"
+                                android:orientation="vertical"
+                                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                                app:layout_constraintTop_toBottomOf="@+id/viewcustomer"
+                                tools:itemCount="3"
+                                tools:listitem="@layout/bookedpassenger_itemlayout" />
+
+                            <ImageView
+                                android:id="@+id/dashimage"
+                                android:layout_width="match_parent"
+                                android:layout_height="12dp"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/dottedline"
+                                app:layout_constraintTop_toBottomOf="@+id/passengerdetailslayout" />
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/leftcard"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginLeft="-10dp"
+                                app:cardBackgroundColor="@color/bgcolor"
+                                app:cardCornerRadius="40dp"
+                                app:cardElevation="2dp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/dashimage" />
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/rightcard"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginRight="-10dp"
+                                app:cardBackgroundColor="@color/bgcolor"
+                                app:cardCornerRadius="40dp"
+                                app:cardElevation="2dp"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/dashimage" />
+
+                            <TextView
+                                android:id="@+id/pnrtitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:elevation="1dp"
+                                android:fontFamily="@font/roboto_regular"
+                                android:paddingVertical="5dp"
+                                android:text="PNR"
+                                android:textColor="@color/primary_blue"
+                                android:textSize="14sp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="@+id/view1"
+                                app:layout_constraintTop_toTopOf="@+id/leftcard" />
+
+                            <TextView
+                                android:id="@+id/boardingtitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:elevation="1dp"
+                                android:fontFamily="@font/roboto_regular"
+                                android:paddingVertical="5dp"
+                                android:text="BOOKING ID"
+                                android:textColor="@color/primary_blue"
+                                android:textSize="14sp"
+                                app:layout_constraintLeft_toLeftOf="@+id/view1"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/rightcard" />
+
+                            <LinearLayout
+                                android:id="@+id/backlayoutshadow"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_marginHorizontal="8dp"
+                                android:background="@drawable/cardbottomshapebookedticket"
+                                android:orientation="vertical"
+                                app:layout_constraintBottom_toBottomOf="@+id/pnrnumber"
+                                app:layout_constraintTop_toTopOf="@+id/boardingtitle" />
+
+                            <TextView
+                                android:id="@+id/pnrnumber"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_bold"
+                                android:gravity="center"
+                                android:padding="6dp"
+                                android:text="BBTGREEWDQW12OK71"
+                                android:textColor="@color/edtblack"
+                                android:textSize="12sp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="@+id/view1"
+                                app:layout_constraintTop_toBottomOf="@+id/view" />
+
+                            <TextView
+                                android:id="@+id/bookingIDnumber"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_bold"
+                                android:gravity="center"
+                                android:padding="6dp"
+                                android:text="BBB7GWG8"
+                                android:textColor="@color/edtblack"
+                                android:textSize="14sp"
+                                app:layout_constraintLeft_toLeftOf="@+id/view1"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/view" />
+
+                            <View
+                                android:id="@+id/view"
+                                android:layout_width="0dp"
+                                android:layout_height="1dp"
+                                android:background="@color/grey"
+                                app:layout_constraintLeft_toLeftOf="@+id/backlayoutshadow"
+                                app:layout_constraintRight_toRightOf="@+id/backlayoutshadow"
+                                app:layout_constraintTop_toBottomOf="@+id/boardingtitle" />
+
+                            <View
+                                android:id="@+id/view1"
+                                android:layout_width="1dp"
+                                android:layout_height="0dp"
+                                android:background="@color/grey"
+                                app:layout_constraintBottom_toBottomOf="@+id/backlayoutshadow"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/dashimage" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <ImageView
+                    android:id="@+id/ticketQRCode"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:src="@drawable/qrcode"
+                    android:layout_marginBottom="20dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/download_E_ticketlayout"/>
+
+                <LinearLayout
+                    android:id="@+id/download_E_ticketlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    app:layout_constraintBottom_toTopOf="@+id/bottomcard"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent">
+
+                    <LinearLayout
+                        android:id="@+id/download_E_ticket"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/buttonshape">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/download_e_ticket"
+                            android:layout_gravity="center"
+                            android:padding="8dp"
+                            android:textSize="14sp"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/roboto_bold"
+                            android:autoSizeTextType="uniform"
+                            android:gravity="center"/>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="10dp"
+                        android:layout_height="0dp"/>
+
+                    <LinearLayout
+                        android:id="@+id/shareticket"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/selectedfrombox">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/share_e_ticket"
+                            android:layout_gravity="center"
+                            android:padding="8dp"
+                            android:textSize="14sp"
+                            android:textColor="@color/primary_blue"
+                            android:fontFamily="@font/roboto_bold"
+                            android:autoSizeTextType="uniform"
+                            android:gravity="center"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/bottomcard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    app:cardBackgroundColor="@color/cardcolor"
+                    app:cardCornerRadius="7dp"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="6dp">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:padding="2dp"
+                            android:src="@drawable/infoicon"
+                            app:tint="@color/primary_blue" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="Note:"
+                            android:textColor="@color/primary_blue" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:fontFamily="@font/roboto_regular"
+                            android:text="@string/please_make"
+                            android:textColor="@color/secondary_blue_dark"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+

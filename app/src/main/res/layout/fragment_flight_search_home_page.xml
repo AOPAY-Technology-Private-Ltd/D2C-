@@ -1,0 +1,637 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/bgcolor"
+    tools:context=".ui.view.activity.travel.fragment.FlightSearchHomePageFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:paddingHorizontal="2dp"
+                android:paddingBottom="80dp">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/searchflightlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/selectTripType"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginHorizontal="10dp"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintLeft_toLeftOf="parent"
+                                    app:layout_constraintRight_toRightOf="parent">
+
+                                    <androidx.cardview.widget.CardView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        app:cardBackgroundColor="@color/cardcolor"
+                                        app:cardCornerRadius="10dp"
+                                        app:layout_constraintRight_toRightOf="parent"
+                                        app:layout_constraintLeft_toLeftOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:paddingVertical="3dp">
+
+                                            <TextView
+                                                android:id="@+id/onewaySelection"
+                                                android:layout_weight="1"
+                                                android:layout_width="0dp"
+                                                android:text="@string/one_way"
+                                                android:gravity="center"
+                                                android:textSize="12sp"
+                                                android:textColor="@color/black"
+                                                android:background="@drawable/tripselectionbg"
+                                                android:fontFamily="@font/roboto_bold"
+                                                android:layout_marginHorizontal="3dp"
+                                                android:paddingVertical="4dp"
+                                                android:layout_height="wrap_content"/>
+
+                                            <TextView
+                                                android:id="@+id/roundTripSelection"
+                                                android:layout_weight="1"
+                                                android:layout_width="0dp"
+                                                android:text="@string/round_trip"
+                                                android:gravity="center"
+                                                android:textSize="12sp"
+                                                android:textColor="@color/black"
+                                                android:fontFamily="@font/roboto_regular"
+                                                android:layout_marginHorizontal="3dp"
+                                                android:paddingVertical="4dp"
+                                                android:layout_height="wrap_content"/>
+
+
+                                        </LinearLayout>
+
+                                    </androidx.cardview.widget.CardView>
+
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/fromcityLayout"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginHorizontal="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:background="@drawable/fromtoback"
+                                    android:orientation="vertical"
+                                    android:padding="10dp"
+                                    app:layout_constraintLeft_toLeftOf="parent"
+                                    app:layout_constraintRight_toRightOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/selectTripType">
+
+                                    <LinearLayout
+                                        android:id="@+id/fromlayout"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+
+                                        <ImageView
+                                            android:id="@+id/imageview"
+                                            android:layout_width="0dp"
+                                            android:layout_height="25dp"
+                                            android:layout_gravity="center"
+                                            android:layout_weight=".2"
+                                            app:tint="@color/edtblack"
+                                            android:layout_marginLeft="-6dp"
+                                            android:src="@drawable/take_off" />
+
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:layout_gravity="center"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:id="@+id/fromcityname"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:fontFamily="@font/roboto_bold"
+                                                android:hint="@string/leaving_from"
+                                                android:textSize="15sp"
+                                                android:textColor="@color/edtblack"/>
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/tocityLayout"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginHorizontal="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:background="@drawable/fromtoback"
+                                    android:orientation="vertical"
+                                    android:padding="10dp"
+                                    app:layout_constraintLeft_toLeftOf="parent"
+                                    app:layout_constraintRight_toRightOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/fromcityLayout">
+
+                                    <LinearLayout
+                                        android:id="@+id/tolayout"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center">
+
+                                        <ImageView
+                                            android:layout_width="0dp"
+                                            android:layout_height="25dp"
+                                            android:layout_gravity="center"
+                                            android:layout_weight=".2"
+                                            app:tint="@color/edtblack"
+                                            android:src="@drawable/landing" />
+
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:layout_gravity="center">
+
+                                            <TextView
+                                                android:id="@+id/tocityname"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:fontFamily="@font/roboto_bold"
+                                                android:hint="@string/going_to"
+                                                android:textSize="15sp"
+                                                android:textColor="@color/edtblack"/>
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/reversetrip"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_marginRight="6dp"
+                                    app:cardCornerRadius="80dp"
+                                    app:cardElevation="4dp"
+                                    app:cardBackgroundColor="@color/white"
+                                    app:layout_constraintBottom_toBottomOf="@+id/tocityLayout"
+                                    app:layout_constraintRight_toRightOf="@+id/fromcityLayout"
+                                    app:layout_constraintTop_toTopOf="@+id/fromcityLayout">
+
+                                    <ImageView
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:layout_gravity="center"
+                                        android:src="@drawable/swapicon" />
+
+                                </androidx.cardview.widget.CardView>
+
+                                <TextView
+                                    android:id="@+id/journeytitle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="12sp"
+                                    android:textColor="@color/black"
+                                    android:fontFamily="@font/roboto_regular"
+                                    android:text="@string/journey_date"
+                                    android:padding="5dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginHorizontal="5dp"
+                                    app:layout_constraintTop_toBottomOf="@+id/tocityLayout"/>
+
+                                <LinearLayout
+                                    android:id="@+id/datelayout"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="-5dp"
+                                    android:layout_marginHorizontal="2dp"
+                                    app:layout_constraintLeft_toLeftOf="parent"
+                                    app:layout_constraintRight_toRightOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/journeytitle">
+
+                                    <LinearLayout
+                                        android:id="@+id/calendarLayout"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_margin="4dp"
+                                        android:gravity="center">
+
+                                        <ImageView
+                                            android:layout_width="30dp"
+                                            android:layout_height="30dp"
+                                            android:padding="4dp"
+                                            android:src="@drawable/calendaricon"/>
+
+                                        <TextView
+                                            android:id="@+id/monthyear"
+                                            android:text="Feb,2026"
+                                            android:textSize="14sp"
+                                            android:fontFamily="@font/roboto_regular"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"/>
+
+                                    </LinearLayout>
+
+                                    <View
+                                        android:layout_width="3dp"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginBottom="5dp"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/grey"/>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center">
+
+                                        <TextView
+                                            android:id="@+id/searchDate"
+                                            android:text="28 Feb 2026"
+                                            android:textSize="16sp"
+                                            android:gravity="center"
+                                            android:visibility="gone"
+                                            android:layout_marginLeft="10dp"
+                                            android:textColor="@color/edtblack"
+                                            android:fontFamily="@font/roboto_medium"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"/>
+
+                                        <androidx.recyclerview.widget.RecyclerView
+                                            android:id="@+id/currentDaydate"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="55dp"
+                                            android:layout_marginRight="10dp"
+                                            tools:listitem="@layout/currentdate_withnextdate_itemlayout"
+                                            android:orientation="horizontal"
+                                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/addreturn"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginHorizontal="10dp"
+                                    app:layout_constraintTop_toBottomOf="@+id/datelayout">
+
+                                    <TextView
+                                        android:id="@+id/addlayout"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="@color/primary_blue"
+                                        android:fontFamily="@font/roboto_regular"
+                                        android:textSize="14sp"
+                                        android:layout_marginTop="6dp"
+                                        android:paddingVertical="6dp"
+                                        android:text="+ Add Return Date"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintBottom_toBottomOf="parent"/>
+
+                                    <LinearLayout
+                                        android:id="@+id/returncalendarLayout"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        android:visibility="gone"
+                                        android:orientation="vertical"
+                                        app:layout_constraintLeft_toLeftOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintBottom_toBottomOf="parent">
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:textSize="12sp"
+                                            android:textColor="@color/black"
+                                            android:fontFamily="@font/roboto_regular"
+                                            android:text="@string/return_date"
+                                            android:padding="5dp"
+                                            android:layout_marginLeft="-2dp"
+                                            app:layout_constraintTop_toBottomOf="@+id/tocityLayout"/>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="-2dp">
+
+                                            <ImageView
+                                                android:layout_width="30dp"
+                                                android:layout_height="30dp"
+                                                android:padding="3dp"
+                                                android:layout_gravity="center"
+                                                android:src="@drawable/calendaricon"/>
+
+                                            <View
+                                                android:layout_width="2dp"
+                                                android:layout_marginTop="5dp"
+                                                android:layout_marginBottom="5dp"
+                                                android:layout_gravity="center"
+                                                android:layout_marginLeft="3dp"
+                                                android:layout_height="match_parent"
+                                                android:background="@color/grey"/>
+
+                                            <TextView
+                                                android:id="@+id/returnDate"
+                                                android:text="28 Feb 2026"
+                                                android:textSize="16sp"
+                                                android:gravity="center"
+                                                android:layout_gravity="center"
+                                                android:paddingVertical="6dp"
+                                                android:layout_marginLeft="11dp"
+                                                android:textColor="@color/edtblack"
+                                                android:fontFamily="@font/roboto_medium"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content" />
+
+                                            <ImageView
+                                                android:id="@+id/cancel"
+                                                android:layout_width="30dp"
+                                                android:layout_height="30dp"
+                                                android:src="@drawable/cancel"
+                                                android:padding="5dp"
+                                                android:layout_gravity="center"
+                                                android:layout_marginLeft="5dp"
+                                                app:layout_constraintTop_toTopOf="@id/returnDate"
+                                                app:layout_constraintBottom_toBottomOf="@id/returnDate"
+                                                app:layout_constraintLeft_toRightOf="@id/returnDate"/>
+
+                                        </LinearLayout>
+
+
+
+                                    </LinearLayout>
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/cabinclass"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:layout_constraintLeft_toLeftOf="parent"
+                                    app:layout_constraintRight_toRightOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/addreturn">
+
+                                    <TextView
+                                        android:id="@+id/cabinclasstitle"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="12sp"
+                                        android:textColor="@color/black"
+                                        android:fontFamily="@font/roboto_regular"
+                                        android:layout_marginHorizontal="10dp"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintLeft_toLeftOf="parent"
+                                        app:layout_constraintRight_toRightOf="parent"
+                                        android:text="@string/travellers_and_cabin_class"
+                                        android:padding="5dp"
+                                        android:layout_marginTop="10dp" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginHorizontal="10dp"
+                                        android:gravity="center"
+                                        app:layout_constraintTop_toBottomOf="@+id/cabinclasstitle"
+                                        app:layout_constraintLeft_toLeftOf="parent"
+                                        app:layout_constraintRight_toRightOf="parent"
+                                        app:layout_constraintBottom_toBottomOf="parent">
+
+                                        <ImageView
+                                            android:layout_width="30dp"
+                                            android:layout_height="30dp"
+                                            android:padding="2dp"
+                                            android:alpha=".8"
+                                            android:src="@drawable/forcabinclassicon"/>
+
+                                        <TextView
+                                            android:id="@+id/cabinname"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="1 Adult (Economy)"
+                                            android:textSize="14sp"
+                                            android:textColor="@color/black"
+                                            android:fontFamily="@font/roboto_medium"/>
+
+
+                                    </LinearLayout>
+
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/specialfarelayout"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:layout_constraintLeft_toLeftOf="parent"
+                                    app:layout_constraintRight_toRightOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/cabinclass">
+
+                                    <TextView
+                                        android:id="@+id/specialoffertxt"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="12sp"
+                                        android:textColor="@color/black"
+                                        android:fontFamily="@font/roboto_regular"
+                                        android:layout_marginHorizontal="10dp"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintLeft_toLeftOf="parent"
+                                        android:text="@string/special_fares_optional"
+                                        android:padding="5dp"
+                                        android:layout_marginTop="10dp" />
+
+                                    <LinearLayout
+                                        android:id="@+id/infofarelayout"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="-10dp"
+                                        android:paddingVertical="10dp"
+                                        android:paddingHorizontal="10dp"
+                                        app:layout_constraintTop_toTopOf="@+id/specialoffertxt"
+                                        app:layout_constraintBottom_toBottomOf="@+id/specialoffertxt"
+                                        app:layout_constraintLeft_toRightOf="@+id/specialoffertxt">
+
+                                        <ImageView
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:padding="2dp"
+                                            android:alpha=".8"
+                                            android:src="@drawable/information" />
+
+                                    </LinearLayout>
+
+                                   <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginHorizontal="10dp"
+                                        app:layout_constraintTop_toBottomOf="@+id/specialoffertxt"
+                                        app:layout_constraintLeft_toLeftOf="parent"
+                                        app:layout_constraintRight_toRightOf="parent"
+                                        app:layout_constraintBottom_toBottomOf="parent">
+
+                                        <androidx.recyclerview.widget.RecyclerView
+                                            android:id="@+id/extraofferList"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="horizontal"
+                                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                                            app:layout_constraintTop_toBottomOf="@+id/specialoffrtxt"
+                                            tools:listitem="@layout/special_offer_itemlayout"/>
+
+
+                                    </LinearLayout>
+
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <CheckBox
+                                    android:id="@+id/checkbox"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/show_non_stop_flights_only"
+                                    app:layout_constraintLeft_toLeftOf="parent"
+                                    app:layout_constraintRight_toRightOf="parent"
+                                    android:layout_marginHorizontal="8dp"
+                                    android:textSize="12sp"
+                                    android:fontFamily="@font/roboto_regular"
+                                    android:textColor="@color/edtblack"
+                                    app:layout_constraintTop_toBottomOf="@+id/specialfarelayout"/>
+
+                                <LinearLayout
+                                    android:id="@+id/flightSearchButton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="20dp"
+                                    android:background="@color/primary_blue"
+                                    app:layout_constraintTop_toBottomOf="@+id/checkbox">
+
+
+                                    <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:autoSizeTextType="uniform"
+                                            android:fontFamily="@font/roboto_bold"
+                                            android:gravity="center"
+                                            android:padding="8dp"
+                                            android:text="Search Flights"
+                                            android:textColor="@color/white"
+                                            android:textSize="16sp" />
+
+
+                                </LinearLayout>
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        </LinearLayout>
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <ImageView
+                    android:id="@+id/flightbanner"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:src="@drawable/bookingflightbanner"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintTop_toBottomOf="@+id/searchflightlayout"/>
+
+
+                <ImageView
+                    android:id="@+id/bussecondbanner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="210dp"
+                    android:src="@drawable/flightbanner"
+                    android:layout_marginTop="20dp"
+                    android:scaleType="centerInside"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/flightbanner"/>
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <LinearLayout
+            android:id="@+id/flightbookinglayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/buttonshape"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:autoSizeTextType="uniform"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="My Bookings"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

@@ -1,0 +1,25 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.BOSPay" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">#0056b3</item>
+        <item name="android:statusBarColor">#0D1B2A</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+    </style>
+
+    <declare-styleable name="SearchableSpinner_Style">
+
+        <attr name="hintText" format="string" />
+
+    </declare-styleable>
+
+    <style name="MyDatePickerDialogTheme" parent="Theme.MaterialComponents.DayNight.Dialog">
+        <item name="colorPrimary">@color/primary_blue</item>
+        <item name="colorPrimaryVariant">@color/primary_blue</item>
+        <item name="colorAccent">@color/primary_blue</item>
+        <item name="android:textColorPrimary">@color/black</item>
+    </style>
+
+</resources>

@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintLeft_toRightOf="parent">
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="6dp"
+            app:cardBackgroundColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@+id/header">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/topheader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/flightdetailsheader"
+                    android:orientation="vertical"
+                    android:padding="6dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/fromAirportCode"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="4dp"
+                            android:text="DEL"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                           android:fontFamily="@font/roboto_bold" />
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_margin="6dp"
+                            android:src="@drawable/onestoparrow"
+                            app:tint="@color/white" />
+
+                        <TextView
+                            android:id="@+id/toAirportCode"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="4dp"
+                            android:text="BOM"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/roboto_bold" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/travelprimedetails"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Non stop| 2 hrs 15 mins | Economy Class"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                       android:fontFamily="@font/roboto_bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/airlineicon"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/airindia" />
+
+                    <TextView
+                        android:id="@+id/airlinename"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:text="Air India |"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/roboto_bold" />
+
+                    <TextView
+                        android:id="@+id/flightnumberwithcode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text=" AI 2999"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/roboto_regular"
+                        android:textSize="10sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/origintime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="21:45"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:fontFamily="@font/roboto_bold" />
+
+                        <TextView
+                            android:id="@+id/origindate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Wed,2 Jul 25"
+                            android:fontFamily="@font/roboto_regular"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".5"
+                        android:paddingBottom="4dp">
+
+                        <TextView
+                            android:id="@+id/durationtime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2h 15 m"
+                            android:visibility="invisible"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="6dp"
+                            android:layout_alignTop="@+id/cardclock"
+                            android:layout_alignBottom="@+id/cardclock"
+                            android:layout_marginHorizontal="10dp"
+                            android:src="@drawable/dottedline" />
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardclock"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_margin="2dp"
+                            android:layout_below="@+id/durationtime"
+                            android:layout_centerInParent="true"
+                            app:cardCornerRadius="40dp">
+
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/time" />
+
+                        </androidx.cardview.widget.CardView>
+
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/destinationtime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="23:25"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:fontFamily="@font/roboto_bold" />
+
+                        <TextView
+                            android:id="@+id/destinationdate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Wed,2 Jul 25"
+                            android:fontFamily="@font/roboto_regular"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/origincityname"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="New Delhi"
+                            android:textColor="@color/edtblack"
+                            android:fontFamily="@font/roboto_regular"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/originairportname"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            android:text="Indira Gandhi International Airport"
+                            android:textColor="@color/edtblack"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/originterminal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Terminal T3"
+                            android:textSize="10sp"
+                            android:fontFamily="@font/roboto_regular"
+                            android:textColor="@color/primary_blue"/>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:gravity="end"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/destinationcityname"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="New Delhi"
+                            android:textColor="@color/edtblack"
+                            android:fontFamily="@font/roboto_regular"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/destinationairportname"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="end"
+                            android:visibility="gone"
+                            android:text="Indira Gandhi International Airport"
+                            android:textColor="@color/edtblack"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/destinationterminal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Terminal T3"
+                            android:textSize="10sp"
+                            android:fontFamily="@font/roboto_regular"
+                            android:textColor="@color/primary_blue"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <RelativeLayout
+            android:id="@+id/planechangeLayoverlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+            <ImageView
+                android:id="@+id/planeicon"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/changeplane"
+                android:layout_margin="4dp" />
+
+            <TextView
+                android:id="@+id/msgforchangeplane"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/changeplane"
+                android:textColor="@color/orange"
+                android:textSize="14sp"
+                android:fontFamily="@font/roboto_regular"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/planeicon"/>
+
+            <TextView
+                android:id="@+id/showingmsgforchnageplane"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/msgforchangeplane"
+                android:textColor="@color/primary_blue"
+                android:textSize="12sp"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="5 hrs 15 mins Layover at Ahmedabad"
+                android:layout_toRightOf="@+id/planeicon"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

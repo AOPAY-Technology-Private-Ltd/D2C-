@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/loginbackpage"
+    tools:context=".activity.LoginPage">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/loginscreen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/applogo"
+            android:layout_width="90dp"
+            android:layout_height="35dp"
+            android:scaleType="centerCrop"
+            android:padding="5dp"
+            android:layout_marginTop="50dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:src="@drawable/applogoicon"/>
+
+        <TextView
+            android:id="@+id/loginheadtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:autoSizeTextType="uniform"
+            android:text="@string/log_in_to_bos_pay"
+            android:fontFamily="@font/roboto_bold"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@id/applogo"/>
+
+        <TextView
+            android:id="@+id/loginsubtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="7dp"
+            android:autoSizeTextType="uniform"
+            android:text="@string/we_will_create_an_account_if_you_dont_have_one"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@color/edtblack"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@id/loginheadtitle"/>
+
+        <TextView
+            android:id="@+id/enternumbertxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:autoSizeTextType="uniform"
+            android:text="@string/enter_mobile_number"
+            android:fontFamily="@font/roboto_bold"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            app:layout_constraintTop_toBottomOf="@id/loginsubtitle"/>
+
+        <LinearLayout
+            android:id="@+id/loginInputlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/enternumbertxt">
+
+            <LinearLayout
+                android:id="@+id/formobilelogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="3dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/border">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/indiaflag"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+91"
+                    android:textSize="15sp"
+                    android:layout_marginLeft="4dp"
+                    android:autoSizeTextType="uniform"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center"/>
+
+                <EditText
+                    android:id="@+id/mobilenumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="1234567890"
+                    android:inputType="number"
+                    android:imeOptions="actionDone"
+                    android:maxLength="10"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="4dp"
+                    android:autoSizeTextType="uniform"
+                    android:layout_gravity="center"
+                    android:textSize="15sp"
+                    android:background="@null"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/formaillogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="3dp"
+                android:visibility="gone"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/border">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:scaleType="fitXY"
+                    android:padding="4dp"
+                    android:src="@drawable/mailicon"/>
+
+
+                <EditText
+                    android:id="@+id/emailId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter your email"
+                    android:inputType="textEmailAddress"
+                    android:imeOptions="actionDone"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="4dp"
+                    android:autoSizeTextType="uniform"
+                    android:layout_gravity="center"
+                    android:textSize="15sp"
+                    android:background="@null"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/optionallayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="6dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/loginInputlayout">
+
+            <ImageView
+                android:id="@+id/firstview"
+                android:layout_width="130dp"
+                android:layout_height="20dp"
+                android:src="@drawable/dottedline"
+                android:layout_marginLeft="5dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/orlayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Or"
+                app:layout_constraintLeft_toRightOf="@id/firstview"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <ImageView
+                android:id="@+id/secondview"
+                android:layout_width="130dp"
+                android:layout_height="20dp"
+                android:src="@drawable/dottedline"
+                android:layout_marginLeft="5dp"
+                app:layout_constraintLeft_toRightOf="@id/orlayout"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/firstview">
+
+                <ImageView
+                    android:id="@+id/mailicon"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:src="@drawable/mailicon"
+                    app:tint="@color/primary_blue" />
+
+                <TextView
+                    android:id="@+id/logintype"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/login_through_email"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textColor="@color/primary_blue"
+                    app:layout_constraintLeft_toRightOf="@id/mailicon"
+                    app:layout_constraintTop_toTopOf="@+id/mailicon"
+                    app:layout_constraintBottom_toBottomOf="@id/mailicon"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/characterImageview"
+            android:layout_width="250dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintRight_toRightOf="parent"
+            android:src="@drawable/loginanim"
+            app:layout_constraintTop_toBottomOf="@+id/optionallayout"
+            app:layout_constraintBottom_toTopOf="@+id/proceedlayout"/>
+
+
+        <LinearLayout
+            android:id="@+id/proceedlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/buttonshape"
+            android:backgroundTint="@color/disablebuttoncolor"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/proceed"
+                android:layout_gravity="center"
+                android:padding="8dp"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/roboto_bold"
+                android:autoSizeTextType="uniform"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/otpscreen"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/applogo_otpscreen"
+            android:layout_width="90dp"
+            android:layout_height="35dp"
+            android:scaleType="centerCrop"
+            android:padding="5dp"
+            android:layout_marginTop="50dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:src="@drawable/applogoicon"/>
+
+        <TextView
+            android:id="@+id/verifyheadtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:autoSizeTextType="uniform"
+            android:text="@string/verify_otp"
+            android:fontFamily="@font/roboto_bold"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@id/applogo_otpscreen"/>
+
+        <TextView
+            android:id="@+id/otpsubtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="7dp"
+            android:autoSizeTextType="uniform"
+            android:text="@string/enter_the_otp_you_received_on"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@color/edtblack"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@id/verifyheadtitle"/>
+
+        <TextView
+            android:id="@+id/otpnumbertxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:autoSizeTextType="uniform"
+            android:text="@string/enter_otp"
+            android:fontFamily="@font/roboto_bold"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            app:layout_constraintTop_toBottomOf="@id/otpsubtitle"/>
+
+        <LinearLayout
+            android:id="@+id/otplayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:padding="3dp"
+            android:layout_marginHorizontal="10dp"
+            app:layout_constraintTop_toBottomOf="@id/otpnumbertxt">
+
+            <com.chaos.view.PinView
+                    android:id="@+id/pinview"
+                    app:itemCount="6"
+                    app:itemWidth="40dp"
+                    app:itemHeight="40dp"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:itemBackground="@color/white"
+                    android:layout_gravity="center"
+                    app:itemSpacing="7dp"
+                    android:cursorVisible="true"
+                    app:hideLineWhenFilled="false"
+                    app:itemRadius="10dp"
+                    app:lineColor="@color/primary_blue"
+                    style="@style/PinWidget.PinView"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+            </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/resendlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/otplayout">
+
+            <LinearLayout
+                android:id="@+id/timerlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="10dp"
+                android:paddingHorizontal="5dp">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:layout_width="40dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/animation_view"
+                    android:layout_gravity="center"
+                    app:lottie_fileName="otploader.json"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Auto Reading"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/roboto_medium"
+                    android:layout_toRightOf="@id/resendtxt"/>
+
+                <TextView
+                    android:id="@+id/timer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00:60"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="3dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:layout_toRightOf="@id/resendtxt"/>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/resendtxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Resend"
+                android:textSize="16sp"
+                android:visibility="gone"
+                android:paddingVertical="10dp"
+                android:paddingHorizontal="5dp"
+                android:textColor="@color/primary_blue"
+                android:fontFamily="@font/roboto_bold"
+                android:layout_alignParentLeft="true"/>
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/VerifyOtpLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/buttonshape"
+            android:backgroundTint="@color/disablebuttoncolor"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Verify OTP"
+                android:layout_gravity="center"
+                android:padding="8dp"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/roboto_bold"
+                android:autoSizeTextType="uniform"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

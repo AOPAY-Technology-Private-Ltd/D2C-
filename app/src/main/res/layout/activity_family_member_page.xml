@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.GenderPage">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bgcolor">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/headerlayout"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/backicon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/backarrow"
+                android:layout_margin="10dp"
+                android:padding="4dp"
+                app:tint="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ProgressBar
+            android:id="@+id/download_progressbar"
+            android:layout_width="0dp"
+            android:layout_height="5dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:progressDrawable="@drawable/download_progress_style"
+            android:max="100"
+            android:progress="100"
+            android:indeterminate="false"
+            android:background="@color/grey"
+            style="?android:attr/progressBarStyleHorizontal"
+            app:layout_constraintTop_toBottomOf="@id/headerlayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/progresstxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/download_progressbar"
+            android:text="@string/question_4_of_4"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="16dp"
+            android:textColor="@color/edtsubblack"
+            android:fontFamily="@font/roboto_regular"
+            android:textSize="12sp" />
+
+
+        <TextView
+            android:id="@+id/gendertxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/progresstxt"
+            android:text="@string/family_members"
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="16dp"
+            android:textColor="@color/edtsubblack"
+            android:fontFamily="@font/roboto_regular"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/gendersubtxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/gendertxt"
+            android:text="@string/the_information_will_be_used_for_personalizing_your_experience_and_services_across_bos_pay"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="16dp"
+            android:textColor="@color/edtsubblack"
+            android:fontFamily="@font/roboto_regular"
+            android:textSize="12sp" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/financialinfolayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="10dp"
+            android:background="@drawable/editouterborder"
+            app:layout_constraintTop_toBottomOf="@id/gendersubtxt">
+
+            <TextView
+                android:id="@+id/genderquestiontitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/how_do_you_live_with"
+                android:textSize="15sp"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="left"
+                android:padding="10dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:textColor="@color/edtblack"/>
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/grey"
+                app:layout_constraintTop_toBottomOf="@id/genderquestiontitle"/>
+
+            <LinearLayout
+                android:id="@+id/ownershiplayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="10dp"
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@id/view1">
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Spouse"
+                        android:textColor="@color/edtsubblack"
+                        android:textSize="14dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/roboto_medium"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_weight=".5"
+                    android:layout_width="0dp"
+                    android:gravity="right"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/spousecheck"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/grey"
+                app:layout_constraintTop_toBottomOf="@id/ownershiplayout"/>
+
+            <LinearLayout
+                android:id="@+id/twowheelerlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="10dp"
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@id/view2">
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/children"
+                        android:textColor="@color/edtsubblack"
+                        android:textSize="14dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/roboto_medium"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_weight=".5"
+                    android:layout_width="0dp"
+                    android:gravity="right"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/childrencheck"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view4"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/grey"
+                app:layout_constraintTop_toBottomOf="@id/twowheelerlayout"/>
+
+            <LinearLayout
+                android:id="@+id/highersecondarylayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="10dp"
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@id/view4">
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Parents/In-laws"
+                        android:textColor="@color/edtsubblack"
+                        android:textSize="14dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/roboto_medium"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_weight=".5"
+                    android:layout_width="0dp"
+                    android:gravity="right"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/parentscheck"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view5"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/grey"
+                app:layout_constraintTop_toBottomOf="@id/highersecondarylayout"/>
+
+            <LinearLayout
+                android:id="@+id/secondarylayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="10dp"
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@id/view5">
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Siblings"
+                        android:textColor="@color/edtsubblack"
+                        android:textSize="14dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/roboto_medium"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_weight=".5"
+                    android:layout_width="0dp"
+                    android:gravity="right"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/siblingcheck"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view6"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/grey"
+                app:layout_constraintTop_toBottomOf="@id/secondarylayout"/>
+
+            <LinearLayout
+                android:id="@+id/primarylayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="10dp"
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@id/view6">
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Friends"
+                        android:textColor="@color/edtsubblack"
+                        android:textSize="14dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/roboto_medium"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_weight=".5"
+                    android:layout_width="0dp"
+                    android:gravity="right"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/friendscheck"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view7"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/grey"
+                app:layout_constraintTop_toBottomOf="@id/primarylayout"/>
+
+            <LinearLayout
+                android:id="@+id/carownerlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="10dp"
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@id/view7">
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Others"
+                        android:textColor="@color/edtsubblack"
+                        android:textSize="14dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/roboto_medium"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_weight=".5"
+                    android:layout_width="0dp"
+                    android:gravity="right"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/otherscheck"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <LinearLayout
+            android:id="@+id/nextBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/buttonshape"
+            android:backgroundTint="@color/disablebuttoncolor"
+            android:layout_marginHorizontal="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="30dp">
+
+            <TextView
+                android:id="@+id/nextbutton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:autoSizeTextType="uniform"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="@string/completed"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

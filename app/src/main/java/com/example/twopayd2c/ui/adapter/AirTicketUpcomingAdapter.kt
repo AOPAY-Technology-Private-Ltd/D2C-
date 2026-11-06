@@ -1,0 +1,235 @@
+package com.example.twopayd2c.ui.adapter
+
+import android.annotation.SuppressLint
+import android.content.Context
+import android.graphics.Color
+import android.graphics.Typeface
+import android.os.Build
+import android.util.TypedValue
+import android.view.Gravity
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.CheckBox
+import android.widget.TableRow
+import android.widget.TextView
+import androidx.annotation.RequiresApi
+import androidx.recyclerview.widget.RecyclerView
+import com.example.twopayd2c.data.model.travelmodel.travel.flight.airbookingticketList.AirTicketSegmentsItem
+import com.bos.bos.app.ui.view.travel.airfragment.UpcomingAir
+import com.bumptech.glide.Glide
+import com.example.twopayd2c.R
+import com.example.twopayd2c.data.model.travelmodel.flight.AirTicketPaxDetailsForTicketCancelModel
+import com.example.twopayd2c.databinding.FlightBookingTicketLayoutBinding
+import com.example.twopayd2c.utils.ConstantClass.Companion.GetAirlineLogo
+import com.example.twopayd2c.utils.ConstantClass.Companion.calculateTotalFlightDuration
+import com.example.twopayd2c.utils.ConstantClass.Companion.convertDurationToReadableFormat
+import java.time.LocalDate
+import java.time.LocalDateTime
+import java.time.LocalTime
+import java.time.format.DateTimeFormatter
+import java.util.Locale
+
+class AirTicketUpcomingAdapter(private var context: Context, private var passangerList: MutableList<com.example.twopayd2c.data.model.travelmodel.travel.flight.airbookingticketList.DataItem>, var fragment: UpcomingAir) :
+    RecyclerView.Adapter<AirTicketUpcomingAdapter.ViewHolder>() {
+
+    var headers: Array<String> = arrayOf("Select","Pax ID", "Pax Name", "Ticket No", "Status")
+    var checkarrow :Boolean = false
+    val selectedPositions : MutableList<Int> = mutableListOf()
+    private var expandedPosition = -1
+    var segmentList : MutableList<AirTicketSegmentsItem> = mutableListOf()
+
+    companion object{
+        var paxList : MutableList<AirTicketPaxDetailsForTicketCancelModel> = mutableListOf()
+    }
+
+    inner class ViewHolder(val binding: FlightBookingTicketLayoutBinding) :
+        RecyclerView.ViewHolder(binding.root) {
+        var pnr_No = binding.pnrNo
+        var booking_refNo = binding.bookingRefNo
+        var fromtodestination = binding.fromtodestination
+        var viewTicketLayout = binding.viewticketLayout
+        var flightdetailslayout = binding.flightdetailslayout
+        var airlineimage = binding.airlineimage
+        var airlinenamecode = binding.airlinenamecode
+        var origincity = binding.origincity
+        var destinationcity = binding.destinationcity
+        var startdate = binding.startdate
+        var enddate = binding.enddate
+        var startterminal = binding.startterminal
+        var destinationterminal = binding.destinationterminal
+        var durationtime = binding.durationtime
+        var ticketstatus = binding.status
+        var passangerListTable = binding.passangerList
+        var cancelTicketLayout = binding.cancelTicketLayout
+        var canceltxt= binding.canceltxt
+
+    }
+
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+        val bin = FlightBookingTicketLayoutBinding.inflate(LayoutInflater.from(context), parent, false)
+        return ViewHolder(bin)
+    }
+
+
+
+    override fun getItemCount(): Int {
+        return passangerList.size
+    }
+
+
+
+    @SuppressLint("SuspiciousIndentation")
+    @RequiresApi(Build.VERSION_CODES.O)
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        segmentList.clear()
+        paxList.clear()
+
+        holder.pnr_No.text=(passangerList.get(position).airPNR)
+        holder.booking_refNo.text=(passangerList.get(position).bookingRefNo)
+        holder.ticketstatus.text = (passangerList.get(position).ticketStatusDesc)
+        holder.fromtodestination.text = passangerList.get(position).origin . plus(" -> ") . plus(passangerList.get(position).destination)
+
+        var airportIcon = GetAirlineLogo(passangerList[position].apiData.airPNRDetails!![0]!!.airlineCode)
+        Glide.with(context).load(airportIcon).into(holder.airlineimage)
+        holder.airlinenamecode.text = passangerList[position].apiData.airPNRDetails!![0].flights!![0].segments!![0].airlineName.plus(" ") .plus(passangerList[position].apiData.airPNRDetails!![0]!!.flights!![0].segments!![0].flightNumber)
+        holder.origincity.text =  passangerList.get(position).origin
+        holder.destinationcity.text = passangerList.get(position).destination
+
+        passangerList[position].apiData.airPNRDetails!![0].flights!![0].segments?.let { segmentList.addAll(it) }
+
+        if(segmentList.size==1){
+            holder.startdate.text= segmentList[segmentList.size-1].departureDateTime
+            holder.enddate.text= segmentList[segmentList.size-1].arrivalDateTime
+            var duration= convertDurationToReadableFormat(segmentList[segmentList.size-1].duration, addHours = 1)
+            holder.durationtime.text= duration
+            holder.startterminal.text = "Terminal" . plus(segmentList[segmentList.size-1].originTerminal)
+            holder.destinationterminal.text = "Terminal" . plus(segmentList[segmentList.size-1].destinationTerminal)
+        }
+
+        else{
+            holder.startdate.text= segmentList[0].departureDateTime
+            holder.enddate.text= segmentList[segmentList.size-1].arrivalDateTime
+            val segments = listOf(mapOf("departure_DateTime" to segmentList[0].departureDateTime, "arrival_DateTime" to segmentList[0].arrivalDateTime), mapOf("departure_DateTime" to segmentList[segmentList.size-1].departureDateTime, "arrival_DateTime" to segmentList[segmentList.size-1].arrivalDateTime))
+            holder.durationtime.text= calculateTotalFlightDuration(segments)
+            holder.startterminal.text = "Terminal " . plus(segmentList[0].originTerminal)
+            holder.destinationterminal.text = "Terminal " . plus(segmentList[segmentList.size-1].destinationTerminal)
+        }
+
+        holder.flightdetailslayout.visibility = if (passangerList[position].isCardVisible) View.VISIBLE else View.GONE
+
+
+        holder.viewTicketLayout.setOnClickListener {
+            passangerList[position].isCardVisible = !passangerList[position].isCardVisible
+            holder.flightdetailslayout.visibility= View.VISIBLE
+            notifyItemChanged(position)
+        }
+
+
+        var passangerDetails =  passangerList[position].apiData.airPNRDetails!![0].paxTicketDetails
+
+        if(passangerDetails!=null)
+        passangerDetails!!.forEach { data->
+            var paxname = data.firstName . plus(" "). plus(data.lastName)
+            try {
+                var ticketnumber=""
+                if(null!=data.ticketDetails!![0].ticketNumber){
+                    ticketnumber = data.ticketDetails!![0].ticketNumber
+                }
+                paxList.add(AirTicketPaxDetailsForTicketCancelModel(data.paxId,paxname,ticketnumber,data.ticketStatus))
+            }
+            catch (e: Exception){
+                e.message
+            }
+
+        }
+
+        holder.passangerListTable.removeAllViews()
+
+        val headerRow = TableRow(context)
+
+        for (header in headers) {
+            val textView = TextView(context)
+            textView.text = header
+            textView.setPadding(8, 8, 8, 8)
+            textView.setBackgroundColor(Color.parseColor("#E0E0E0"))
+            textView.setTextColor(Color.BLACK)
+            textView.setTextSize(TypedValue.COMPLEX_UNIT_PX, context.resources.getDimension(R.dimen.dimen_12sp))
+            textView.setTypeface(textView.typeface, Typeface.BOLD)
+            textView.gravity = Gravity.START
+            textView.layoutParams = TableRow.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f)
+            headerRow.addView(textView)
+        }
+
+        holder.passangerListTable.addView(headerRow)
+
+        paxList.forEachIndexed { index, row ->
+            val tableRow = TableRow(context)
+
+            // CheckBox
+            val checkBox = CheckBox(context).apply {
+                setPadding(8, 8, 8, 8)
+                gravity = Gravity.START
+                layoutParams = TableRow.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f)
+
+                setOnCheckedChangeListener { _, isChecked ->
+                    if (isChecked) {
+                        selectedPositions.add(index) // Use index
+
+                    } else {
+                        selectedPositions.remove(index)
+
+                    }
+
+                    // Update the button state based on selectedPositions size
+                    if (selectedPositions.isNotEmpty()) {
+                        holder.cancelTicketLayout.backgroundTintList = resources.getColorStateList(R.color.red)
+                        holder.canceltxt.setTextColor(resources.getColor(R.color.white))
+                        holder.cancelTicketLayout.isEnabled = true
+                    } else {
+                        holder.cancelTicketLayout.backgroundTintList = resources.getColorStateList(R.color.button_text_gray)
+                        holder.canceltxt.setTextColor(resources.getColor(R.color.black))
+                        holder.cancelTicketLayout.isEnabled = false
+                    }
+
+                }
+            }
+
+            tableRow.addView(checkBox)
+
+            // Remaining columns
+            listOf(row.paxId, row.paxName, row.ticketNumber,row.ticketstatus).forEach { data ->
+                val textView = TextView(context).apply {
+                    text = data
+                    setPadding(8, 8, 8, 8)
+                    setTextSize(
+                        TypedValue.COMPLEX_UNIT_PX,
+                        context.resources.getDimension(R.dimen.dimen_12sp)
+                    )
+                    setTextColor(Color.BLACK)
+                    gravity = Gravity.START
+                    layoutParams =
+                        TableRow.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f)
+                }
+                tableRow.addView(textView)
+            }
+
+            holder.passangerListTable.addView(tableRow)
+
+        }
+
+
+        holder.cancelTicketLayout.setOnClickListener {
+            if(fragment!=null&& selectedPositions.size>0){
+                fragment.hitApiForCancelAirTicket(selectedPositions,position)
+            }
+        }
+
+    }
+
+
+
+
+
+}

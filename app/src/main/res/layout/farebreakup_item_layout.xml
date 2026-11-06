@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="50dp">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/fare_breakup"
+            android:textColor="@color/edtblack"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+        <ImageView
+            android:id="@+id/cross"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:padding="3dp"
+            android:src="@drawable/cancel"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        android:paddingBottom="10dp"
+        android:background="@drawable/editouterborder"
+        app:layout_constraintTop_toBottomOf="@+id/header"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+            android:layout_marginHorizontal="5dp"
+        android:layout_marginTop="30dp">
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/basefaree"
+            android:textSize="16sp"
+            android:padding="4dp"
+            android:fontFamily="@font/roboto_bold"
+            android:textColor="@color/edtblack"/>
+
+
+        <TextView
+            android:id="@+id/totalbasefare"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="₹ 10,28365"
+            android:textSize="16sp"
+            android:gravity="right"
+            android:padding="4dp"
+            android:fontFamily="@font/roboto_bold"
+            android:textColor="@color/edtblack"/>
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/adultlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginTop="10dp">
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Adult"
+                android:textSize="14sp"
+                android:padding="4dp"
+                android:fontFamily="@font/roboto_regular"
+                android:textColor="@color/edtblack"/>
+
+            <TextView
+                android:id="@+id/adultcount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(1x₹ 10,285)"
+                android:fontFamily="@font/roboto_regular"
+                android:textSize="14sp"
+                android:padding="4dp"
+                android:textColor="@color/edtblack"/>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/totalamountofadult"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="₹ 10,2836"
+                android:gravity="right"
+                android:fontFamily="@font/roboto_regular"
+                android:padding="4dp"
+                android:textColor="@color/edtblack"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/childlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Children"
+                android:textSize="14sp"
+                android:fontFamily="@font/roboto_regular"
+                android:padding="4dp"
+                android:textColor="@color/edtblack"/>
+
+            <TextView
+                android:id="@+id/childcount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(1x₹ 10,285)"
+                android:textSize="14sp"
+                android:padding="4dp"
+                android:fontFamily="@font/roboto_regular"
+                android:textColor="@color/edtblack"/>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/totalamountofchild"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="₹ 10,265"
+                android:gravity="right"
+                android:fontFamily="@font/roboto_regular"
+                android:padding="4dp"
+                android:textColor="@color/edtblack"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/infantlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Infant"
+                android:padding="4dp"
+                android:textSize="14sp"
+                android:fontFamily="@font/roboto_regular"
+                android:textColor="@color/edtblack"/>
+
+                <TextView
+                    android:id="@+id/infantcount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(1x₹ 10,285)"
+                    android:padding="4dp"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textColor="@color/edtblack"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/totalamountofinfant"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="₹ 10,285"
+                android:gravity="right"
+                android:padding="4dp"
+                android:fontFamily="@font/roboto_regular"
+                android:textColor="@color/edtblack"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:background="@color/grey"
+            android:layout_marginTop="4dp"
+            android:layout_height="2dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginTop="4dp">
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/taxes"
+                android:padding="4dp"
+                android:fontFamily="@font/roboto_bold"
+                android:textSize="16sp"
+                android:textColor="@color/edtblack"/>
+
+
+            <TextView
+                android:id="@+id/totaltaxesfare"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="₹ 10,28365"
+                android:gravity="right"
+                android:padding="4dp"
+                android:textSize="16sp"
+                android:fontFamily="@font/roboto_bold"
+                android:textColor="@color/edtblack"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/adultairporttaxlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginTop="10dp">
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Adult"
+                    android:textSize="14sp"
+                    android:padding="4dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textColor="@color/edtblack"/>
+
+                <TextView
+                    android:id="@+id/adult_airporttax_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(1x₹ 10,285)"
+                    android:textSize="14sp"
+                    android:padding="4dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textColor="@color/edtblack"/>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/totaltaxesofadult"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="₹ 10,2836"
+                android:gravity="right"
+                android:padding="4dp"
+                android:fontFamily="@font/roboto_regular"
+                android:textColor="@color/edtblack"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/childairporttaxlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Children"
+                    android:textSize="14sp"
+                    android:padding="4dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textColor="@color/edtblack"/>
+
+                <TextView
+                    android:id="@+id/child_airporttax_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(1x₹ 10,285)"
+                    android:textSize="14sp"
+                    android:padding="4dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textColor="@color/edtblack"/>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/totaltaxesofchild"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="₹ 10,265"
+                android:gravity="right"
+                android:fontFamily="@font/roboto_regular"
+                android:padding="4dp"
+                android:textColor="@color/edtblack"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/infantairporttaxlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Infant"
+                    android:padding="4dp"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textColor="@color/edtblack"/>
+
+                <TextView
+                    android:id="@+id/infant_airporttax_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(1x₹ 10,285)"
+                    android:padding="4dp"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textColor="@color/edtblack"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/totaltaxesofinfant"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="₹ 10,285"
+                android:gravity="right"
+                android:padding="4dp"
+                android:fontFamily="@font/roboto_regular"
+                android:textColor="@color/edtblack"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/grey"/>
+
+
+        <LinearLayout
+            android:id="@+id/footer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:text="Total Amount"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="left"
+                android:textSize="16sp"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/overalltotalamount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="₹ 12,28365"
+                android:gravity="right"
+                android:textColor="@color/edtblack"
+                android:textSize="16sp"
+                android:fontFamily="@font/roboto_bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

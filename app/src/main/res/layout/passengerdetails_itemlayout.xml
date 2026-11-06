@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="4dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/userName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Annu Satija"
+        android:textSize="15sp"
+        android:textColor="@color/edtblack"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:fontFamily="@font/roboto_medium" />
+
+    <LinearLayout
+        android:id="@+id/genderagelayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="@+id/userName"
+        app:layout_constraintTop_toBottomOf="@+id/userName">
+
+        <TextView
+            android:id="@+id/gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:fontFamily="@font/roboto_regular"
+            android:layout_marginRight="5dp"
+            android:text="Female"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/yearcard"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            app:cardCornerRadius="20dp"
+            android:alpha=".2"
+            android:padding="4dp"
+            app:cardBackgroundColor="@color/edtsubblack"/>
+
+        <TextView
+            android:id="@+id/age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:fontFamily="@font/roboto_regular"
+            android:layout_marginLeft="5dp"
+            android:text="25 yr"/>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            app:cardCornerRadius="20dp"
+            android:alpha=".2"
+            android:padding="4dp"
+            android:layout_marginLeft="5dp"
+            app:cardBackgroundColor="@color/edtsubblack"/>
+
+        <TextView
+            android:id="@+id/travellertype"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:fontFamily="@font/roboto_regular"
+            android:layout_marginLeft="5dp"
+            android:text="Adult"/>
+
+    </LinearLayout>
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/backgroundcolor"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/genderagelayout"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

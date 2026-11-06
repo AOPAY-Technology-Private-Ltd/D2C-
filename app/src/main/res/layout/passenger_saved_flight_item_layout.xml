@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/userName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Annu Satija"
+        android:textSize="15sp"
+        android:textColor="@color/edtblack"
+        android:fontFamily="@font/roboto_medium"
+        app:layout_constraintTop_toTopOf="@+id/checkBox"
+        app:layout_constraintLeft_toRightOf="@id/checkBox"
+        app:layout_constraintBottom_toBottomOf="@id/checkBox"/>
+
+    <LinearLayout
+        android:id="@+id/genderagelayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="@+id/userName"
+        app:layout_constraintTop_toBottomOf="@+id/userName">
+
+        <TextView
+            android:id="@+id/gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:fontFamily="@font/roboto_regular"
+            android:layout_marginRight="5dp"
+            android:text="Female"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/yearcard"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            app:cardCornerRadius="20dp"
+            android:alpha=".2"
+            android:padding="4dp"
+            app:cardBackgroundColor="@color/edtsubblack"/>
+
+        <TextView
+            android:id="@+id/age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:fontFamily="@font/roboto_regular"
+            android:layout_marginLeft="5dp"
+            android:text="25 yr"/>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            app:cardCornerRadius="20dp"
+            android:alpha=".2"
+            android:padding="4dp"
+            android:layout_marginLeft="5dp"
+            app:cardBackgroundColor="@color/edtsubblack"/>
+
+        <TextView
+            android:id="@+id/travellertype"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:fontFamily="@font/roboto_regular"
+            android:layout_marginLeft="5dp"
+            android:text="Adult"/>
+
+    </LinearLayout>
+
+   
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/backgroundcolor"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/genderagelayout"/>
+
+    <ImageView
+        android:id="@+id/deleteitem"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:padding="3dp"
+        android:layout_marginRight="10dp"
+        android:alpha=".8"
+        android:background="@drawable/unselctedcircle"
+        android:src="@drawable/deleteicon"
+        app:layout_constraintTop_toTopOf="@+id/userName"
+        app:layout_constraintTop_toBottomOf="@+id/genderagelayout"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <ImageView
+        android:id="@+id/edititem"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:padding="6dp"
+        android:layout_marginRight="10dp"
+        android:alpha=".8"
+        android:src="@drawable/editicon"
+        android:background="@drawable/unselctedcircle"
+        app:layout_constraintRight_toLeftOf="@id/deleteitem"
+        app:layout_constraintTop_toTopOf="@+id/userName"
+        app:layout_constraintTop_toBottomOf="@+id/genderagelayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

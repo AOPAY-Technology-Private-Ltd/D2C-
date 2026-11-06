@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Vertical line -->
+    <item android:gravity="right|bottom">
+        <shape android:shape="rectangle">
+            <size
+                android:width="3dp"
+                android:height="40dp"/>
+            <solid android:color="@color/orange"/>
+        </shape>
+    </item>
+
+    <!-- Horizontal line -->
+    <item android:gravity="right|top">
+        <shape android:shape="rectangle">
+            <size
+                android:width="40dp"
+                android:height="3dp"/>
+            <solid android:color="@color/orange"/>
+        </shape>
+    </item>
+
+</layer-list>

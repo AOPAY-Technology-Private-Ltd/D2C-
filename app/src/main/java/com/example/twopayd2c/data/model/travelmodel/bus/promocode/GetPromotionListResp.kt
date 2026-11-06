@@ -1,0 +1,123 @@
+package com.example.twopayd2c.data.model.travelmodel.bus.promocode
+
+import com.google.gson.annotations.SerializedName
+
+data class GetPromotionListResp(
+
+	@field:SerializedName("returnCode")
+	val returnCode: String? = null,
+
+	@field:SerializedName("data")
+	val data: List<PromocodeDataItem?>? = null,
+
+	@field:SerializedName("returnMessage")
+	val returnMessage: String? = null,
+
+	@field:SerializedName("isSuccess")
+	val isSuccess: Boolean? = null
+)
+
+data class PromocodeDataItem(
+
+	@field:SerializedName("country")
+	val country: String? = null,
+
+	@field:SerializedName("totalUsedCount")
+	val totalUsedCount: Int? = null,
+
+	@field:SerializedName("applicationType")
+	val applicationType: String? = null,
+
+	@field:SerializedName("agentType")
+	val agentType: String? = null,
+
+	@field:SerializedName("endDate")
+	val endDate: String? = null,
+
+	@field:SerializedName("description")
+	val description: String? = null,
+
+	@field:SerializedName("updatedDate")
+	val updatedDate: String? = null,
+
+	@field:SerializedName("operatorName")
+	val operatorName: List<Any?>? = null,
+
+	@field:SerializedName("usageLimitPerUser")
+	val usageLimitPerUser: Int? = null,
+
+	@field:SerializedName("offerType")
+	val offerType: String? = null,
+
+	@field:SerializedName("applicableSubServices")
+	val applicableSubServices: List<Any?>? = null,
+
+	@field:SerializedName("maxDiscountAmount")
+	val maxDiscountAmount: Int? = null,
+
+	@field:SerializedName("applicableOperators")
+	val applicableOperators: List<Any?>? = null,
+
+	@field:SerializedName("adminCode")
+	val adminCode: String? = null,
+
+	@field:SerializedName("promoCode")
+	val promoCode: String? = null,
+
+	@field:SerializedName("discountType")
+	val discountType: String? = null,
+
+	@field:SerializedName("minTransactionAmount")
+	val minTransactionAmount: Int? = null,
+
+	@field:SerializedName("state")
+	val state: List<String?>? = null,
+
+	@field:SerializedName("applicableServices")
+	val applicableServices: List<String?>? = null,
+
+	@field:SerializedName("customerUsedCount")
+	val customerUsedCount: Int? = null,
+
+	@field:SerializedName("promotionType")
+	val promotionType: String? = null,
+
+	@field:SerializedName("updatedBy")
+	val updatedBy: String? = null,
+
+	@field:SerializedName("serviceName")
+	val serviceName: List<String?>? = null,
+
+	@field:SerializedName("totalUsageLimit")
+	val totalUsageLimit: Int? = null,
+
+	@field:SerializedName("promoName")
+	val promoName: String? = null,
+
+	@field:SerializedName("createdDate")
+	val createdDate: String? = null,
+
+	@field:SerializedName("createdBy")
+	val createdBy: String? = null,
+
+	@field:SerializedName("applicationMode")
+	val applicationMode: String? = null,
+
+	@field:SerializedName("retailerCode")
+	val retailerCode: Any? = null,
+
+	@field:SerializedName("promoID")
+	val promoID: Int? = null,
+
+	@field:SerializedName("userType")
+	val userType: String? = null,
+
+	@field:SerializedName("discountValue")
+	val discountValue: Int? = null,
+
+	@field:SerializedName("startDate")
+	val startDate: String? = null,
+
+	@field:SerializedName("status")
+	val status: String? = null
+)

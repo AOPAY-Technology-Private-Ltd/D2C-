@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="4dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <ImageView
+        android:id="@+id/recommendedlayout"
+        android:layout_width="30dp"
+        android:layout_height="20dp"
+        android:paddingVertical="9dp"
+        android:paddingHorizontal="5dp"
+        android:layout_marginLeft="8dp"
+        android:orientation="vertical"
+        android:backgroundTint="@color/light_blue"
+        android:background="@drawable/downarrowicon"
+        app:layout_constraintRight_toRightOf="@+id/amountlayout"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/amountlayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/walletborder"
+        app:layout_constraintTop_toBottomOf="@id/recommendedlayout"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="4dp"
+            android:paddingHorizontal="10dp"
+            android:gravity="center"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <TextView
+                android:id="@+id/enterAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₹ 300"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:textColor="@color/primary_blue"
+                android:fontFamily="@font/roboto_regular"
+                android:textSize="15sp"/>
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

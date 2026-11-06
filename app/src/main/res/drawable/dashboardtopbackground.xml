@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Base Gradient Background -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="@color/primary_blue"
+                android:endColor="@color/secondary_blue_dark"
+                android:angle="270"/>
+        </shape>
+    </item>
+
+    <!-- Bubble 1 -->
+    <item
+        android:width="100dp"
+        android:height="100dp"
+        android:gravity="top|end"
+        android:right="24dp"
+        android:top="16dp">
+        <shape android:shape="oval">
+            <solid android:color="#33FFFFFF"/>
+        </shape>
+    </item>
+
+    <!-- Bubble 2 -->
+    <item
+        android:width="80dp"
+        android:height="80dp"
+        android:gravity="center|start"
+        android:left="16dp">
+        <shape android:shape="oval">
+            <solid android:color="#22FFFFFF"/>
+        </shape>
+    </item>
+
+    <!-- Bubble 3 -->
+    <item
+        android:width="50dp"
+        android:height="50dp"
+        android:gravity="bottom|end"
+        android:right="48dp"
+        android:bottom="24dp">
+        <shape android:shape="oval">
+            <solid android:color="#18FFFFFF"/>
+        </shape>
+    </item>
+
+</layer-list>

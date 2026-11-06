@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.view.activity.OnBoardingPage">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/onboardingback"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/nextprogresslayout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <ImageView
+            android:id="@+id/imageview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp"
+            android:scaleType="centerInside" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/backarrow"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:src="@drawable/backarrow"
+        app:tint="@color/black"
+        android:padding="6dp"
+        android:visibility="invisible"
+        android:layout_marginTop="25dp"
+        android:layout_marginHorizontal="5dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <TextView
+        android:id="@+id/titletxt"
+        android:text="@string/onboardingtitle1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:padding="10dp"
+        android:alpha="0"
+        android:translationY="40dp"
+        android:layout_marginHorizontal="5dp"
+        android:textColor="@color/primary_blue"
+        android:fontFamily="@font/roboto_bold"
+        app:layout_constraintBottom_toTopOf="@id/subtext"/>
+
+     <TextView
+         android:id="@+id/subtext"
+         android:text="@string/onboardingmsg1"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:gravity="center"
+         android:textSize="13sp"
+         android:padding="10dp"
+         android:alpha="0"
+         android:translationY="40dp"
+         android:layout_marginHorizontal="5dp"
+         android:textColor="@color/edtsubblack"
+         android:fontFamily="@font/roboto_medium"
+         app:layout_constraintBottom_toTopOf="@id/nextprogresslayout"/>
+
+    <LinearLayout
+        android:id="@+id/nextprogresslayout"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:padding="10dp"
+       android:gravity="center"
+       android:layout_marginBottom="15sp"
+       app:layout_constraintBottom_toTopOf="@id/nextbuttonlayout"
+       app:layout_constraintLeft_toLeftOf="parent"
+       app:layout_constraintRight_toRightOf="parent">
+
+       <androidx.cardview.widget.CardView
+           android:id="@+id/firstprogress"
+           android:layout_width="30dp"
+           android:layout_height="4dp"
+           app:cardCornerRadius="10dp"
+           android:layout_margin="5dp"
+           app:cardBackgroundColor="@color/primary_blue"
+           android:orientation="vertical"/>
+
+       <androidx.cardview.widget.CardView
+           android:id="@+id/secondprogress"
+           android:layout_width="30dp"
+           android:layout_height="4dp"
+           app:cardCornerRadius="10dp"
+           android:layout_margin="5dp"
+           app:cardBackgroundColor="@color/cardcolor"
+           android:orientation="vertical"/>
+
+       <androidx.cardview.widget.CardView
+           android:id="@+id/thirdprogress"
+           android:layout_width="30dp"
+           android:layout_height="4dp"
+           app:cardCornerRadius="10dp"
+           android:layout_margin="5dp"
+           app:cardBackgroundColor="@color/footer_unselected"
+           android:orientation="vertical"/>
+
+   </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/nextbuttonlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/buttonshape"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@id/skipbutton"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <TextView
+            android:id="@+id/nexttext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/next"
+            android:layout_gravity="center"
+            android:padding="8dp"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/roboto_bold"
+            android:autoSizeTextType="uniform"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/skipbutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/skip"
+        android:textColor="@color/footer_unselected"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:layout_marginBottom="40dp"
+        android:fontFamily="@font/roboto_medium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

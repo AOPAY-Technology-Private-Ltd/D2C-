@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Box -->
+    <item
+        android:bottom="12dp">
+        <shape>
+            <solid android:color="@color/primary_blue"/>
+            <stroke
+                android:width="1dp"
+                android:color="@color/primary_blue"/>
+            <corners android:radius="2dp"/>
+        </shape>
+    </item>
+
+    <!-- Triangle Pointer -->
+    <item
+        android:width="12dp"
+        android:height="12dp"
+        android:gravity="bottom|center_horizontal">
+
+        <vector xmlns:android="http://schemas.android.com/apk/res/android"
+            android:width="10dp"
+            android:height="8dp"
+            android:viewportWidth="7"
+            android:viewportHeight="8">
+
+            <path
+                android:fillColor="@color/primary_blue"
+                android:strokeColor="@color/primary_blue"
+                android:strokeWidth="1"
+                android:pathData="M0,0 L10,12 L20,0 Z"/>
+        </vector>
+
+    </item>
+
+</layer-list>

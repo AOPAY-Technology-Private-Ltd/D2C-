@@ -1,0 +1,71 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Base.Theme.BOSPay" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">#0056b3</item>
+        <item name="android:statusBarColor">#0D1B2A</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="colorSurface">@color/white</item>
+        <item name="colorSurfaceVariant">@color/white</item>
+    </style>
+
+    <declare-styleable name="SearchableSpinner_Style">
+
+        <attr name="hintText" format="string" />
+
+    </declare-styleable>
+
+    <style name="MyDatePickerDialogTheme" parent="Theme.MaterialComponents.DayNight.Dialog">
+        <item name="colorPrimary">@color/primary_blue</item>
+        <item name="colorPrimaryVariant">@color/primary_blue</item>
+        <item name="colorAccent">@color/primary_blue</item>
+        <item name="android:textColorPrimary">@color/black</item>
+    </style>
+
+    <!--    add form editext properties-->
+    <style name="inputtext_style" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:digits">@string/onlyTextPattern</item>
+        <item name="android:padding">14sp</item>
+        <item name="android:textColor">@color/edtblack</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="CornerTopLeft">
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:background">@drawable/corner_red</item>
+        <item name="android:layout_gravity">top|start</item>
+    </style>
+
+    <style name="CornerTopRight">
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:background">@drawable/corner_yellow</item>
+        <item name="android:layout_gravity">top|start</item>
+    </style>
+
+    <style name="CornerBottomLeft">
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:background">@drawable/corner_blue</item>
+        <item name="android:layout_gravity">top|start</item>
+    </style>
+
+    <style name="CornerBottomRight">
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:background">@drawable/corner_green</item>
+        <item name="android:layout_gravity">top|start</item>
+    </style>
+
+    <style name="mobile_properties" parent="inputtext_style">
+        <item name="android:maxLength">10</item>
+        <item name="android:digits">@string/onlyNumbericPattern</item>
+        <item name="android:inputType">number</item>
+
+    </style>
+
+</resources>

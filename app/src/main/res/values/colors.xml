@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="black">#000000</color>
+    <color name="edtblack">#1F1F1F</color>
+    <color name="edtsubblack">#313030</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="primary_blue">#0097FF</color>
+    <color name="light_blue">#ACD1EB</color>
+    <color name="heightalert">#F0EFE3</color>
+    <color name="secondary_blue_dark">#14364D</color>
+    <color name="bg_light_grey">#F7F7F9</color>
+    <color name="text_white">#FFFFFF</color>
+    <color name="accent_purple">#0097FF</color>
+    <color name="actionbarcolor">#0690EF</color>
+    <color name="bgcolor">#F5F5F5</color>
+    <color name="cardcolor">#D7EAF6</color>
+    <color name="travelcardcolor">#DCE9F2</color>
+    <color name="ticketcardcolor">#DCE3E7</color>
+    <color name="icon_bg_red">#FFEBEE</color>
+    <color name="icon_bg_yellow">#FFFDE7</color>
+    <color name="footer_bg">#F9FAFB</color>
+    <color name="footer_unselected">#9E9E9E</color>
+    <color name="backgroundcolor">#E6E6E6</color>
+    <color name="txtcolor">#262626</color>
+    <color name="red">#ED1F1F</color>
+    <color name="grey">#EDEBEB</color>
+    <color name="disablebuttoncolor">#949494</color>
+    <color name="transparent">#00000000</color>
+    <color name="green">#0E5208</color>
+    <color name="lightgreen">#62EB58</color>
+    <color name="seat_red">#F44336</color>
+    <color name="seat_orange">#FF9800</color>
+    <color name="seat_green">#4CAF50</color>
+    <color name="light_green1">#D0F0D1</color>
+    <color name="light_green2">#E1EFE2</color>
+    <color name="selectde_green">#4FF0CC</color>
+    <color name="dark_green">#0D6B57</color>
+    <color name="inputtext_boxstroke">#605F5F</color>
+    <color name="text_hint_color">#AAAAAA</color>
+    <color name="orange">#ffa928</color>
+    <color name="button_text_gray">#AFAFAF</color>
+    <color name="hint_color_add_leads">#F2D6D5D5</color>
+
+
+
+
+</resources>

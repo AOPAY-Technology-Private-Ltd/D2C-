@@ -44,6 +44,7 @@ class SplashPage : AppCompatActivity() {
         binding.splashThumbnail.visibility=View.VISIBLE
         val videoUri = Uri.parse("android.resource://${packageName}/${R.raw.splash}")
         setVideoForPlay(videoUri)
+        preference.setBooleanValue(ConstantClass.Logged,true)
 
     }
 
@@ -76,11 +77,9 @@ class SplashPage : AppCompatActivity() {
                 }
                 textFadeInAnimation()
             }
-
-           // preference.setBooleanValue(ConstantClass.Logged,true) // for testing purpose
+           // preference.setBooleanValue(ConstantClass.Logged,true)
 
         }
-
 
         binding.videoView.setOnCompletionListener {
             if(isInternetAvailable(this)){
@@ -98,6 +97,7 @@ class SplashPage : AppCompatActivity() {
         }
 
         binding.videoView.start()
+
     }
 
 

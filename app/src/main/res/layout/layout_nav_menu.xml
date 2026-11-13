@@ -5,7 +5,7 @@
     android:id="@+id/navmain"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/secondary_blue_dark"
+    android:background="@color/green"
     android:fitsSystemWindows="false">
 
     <androidx.core.widget.NestedScrollView
@@ -173,7 +173,7 @@
                                 android:layout_centerHorizontal="true"
                                 android:layout_gravity="center"
                                 android:src="@drawable/lock"
-                                app:tint="@color/secondary_blue_dark" />
+                                app:tint="@color/green" />
 
                         </FrameLayout>
 

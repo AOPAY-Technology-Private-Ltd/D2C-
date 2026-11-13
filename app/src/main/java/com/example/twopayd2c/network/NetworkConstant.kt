@@ -1,6 +1,7 @@
 package com.example.twopayd2c.network
 
 class NetworkConstant {
+
     companion object{
         const val BASE_URL: String = "https://payout.boscenter.in/"
 

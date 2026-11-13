@@ -5,22 +5,28 @@
     <color name="edtblack">#1F1F1F</color>
     <color name="edtsubblack">#313030</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="primary_blue">#0097FF</color>
+    <!--<color name="primary_blue">#0097FF</color>-->
+    <color name="primary_blue">#1A7A18</color>
     <color name="light_blue">#ACD1EB</color>
     <color name="heightalert">#F0EFE3</color>
-    <color name="secondary_blue_dark">#14364D</color>
+   <!-- <color name="secondary_blue_dark">#14364D</color>-->
+    <color name="secondary_blue_dark">#98F09A</color>
     <color name="bg_light_grey">#F7F7F9</color>
     <color name="text_white">#FFFFFF</color>
     <color name="accent_purple">#0097FF</color>
     <color name="actionbarcolor">#0690EF</color>
     <color name="bgcolor">#F5F5F5</color>
-    <color name="cardcolor">#D7EAF6</color>
+    <!--<color name="cardcolor">#D7EAF6</color>-->
+    <color name="cardcolor">#E6FAE8</color>
     <color name="travelcardcolor">#DCE9F2</color>
     <color name="ticketcardcolor">#DCE3E7</color>
     <color name="icon_bg_red">#FFEBEE</color>
     <color name="icon_bg_yellow">#FFFDE7</color>
     <color name="footer_bg">#F9FAFB</color>
     <color name="footer_unselected">#9E9E9E</color>
+
+    <color name="light_green">#92DE8D</color>
+
     <color name="backgroundcolor">#E6E6E6</color>
     <color name="txtcolor">#262626</color>
     <color name="red">#ED1F1F</color>

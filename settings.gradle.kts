@@ -13,6 +13,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "BosPay"
+rootProject.name = "TWOPAY"
 include(":app")
  

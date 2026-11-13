@@ -389,6 +389,7 @@
                                     android:layout_width="30dp"
                                     android:layout_height="30dp"
                                     android:layout_gravity="center"
+                                    app:tint="@color/green"
                                     android:scaleType="centerCrop"/>
 
                             </androidx.cardview.widget.CardView>
@@ -422,6 +423,7 @@
                                     android:layout_width="30dp"
                                     android:layout_height="30dp"
                                     android:layout_gravity="center"
+                                    app:tint="@color/green"
                                     android:scaleType="centerCrop"/>
 
                             </androidx.cardview.widget.CardView>
@@ -455,6 +457,7 @@
                                     android:layout_width="30dp"
                                     android:layout_height="30dp"
                                     android:layout_gravity="center"
+                                    app:tint="@color/green"
                                     android:scaleType="centerCrop"/>
 
                             </androidx.cardview.widget.CardView>
@@ -487,6 +490,7 @@
                                     android:src="@drawable/busmapicon"
                                     android:layout_width="30dp"
                                     android:layout_height="30dp"
+                                    app:tint="@color/green"
                                     android:layout_gravity="center"
                                     android:scaleType="centerCrop"/>
 

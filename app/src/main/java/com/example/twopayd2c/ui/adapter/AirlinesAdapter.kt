@@ -7,11 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.twopayd2c.databinding.AirlineslistitemlayotBinding
 
 
-class AirlinesAdapter(
-    private val context: Context,
-    private val flightList: MutableList<Pair<String, Boolean>>,
-    private val listener: OnClickListener
-) : RecyclerView.Adapter<AirlinesAdapter.CustomViewHolder>() {
+class AirlinesAdapter(private val context: Context, private val flightList: MutableList<Pair<String, Boolean>>, private val listener: OnClickListener) : RecyclerView.Adapter<AirlinesAdapter.CustomViewHolder>() {
 
     inner class CustomViewHolder(val binding: AirlineslistitemlayotBinding) : RecyclerView.ViewHolder(binding.root)
 
@@ -46,7 +42,9 @@ class AirlinesAdapter(
         }
     }
 
+
     interface OnClickListener {
         fun setonclicklistner(selectedNames: List<String>)
     }
+
 }

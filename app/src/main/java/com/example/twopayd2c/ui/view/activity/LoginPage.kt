@@ -206,6 +206,7 @@ class LoginPage : AppCompatActivity() {
 
         }
 
+
         binding.mobilenumber.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable?) {
                 val (isValid, errorMsg) = validation()
@@ -229,6 +230,7 @@ class LoginPage : AppCompatActivity() {
             }
         })
 
+
         binding.emailId.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable?) {
                 Log.d("Check", "$checkLoginTypeMobile")
@@ -250,6 +252,7 @@ class LoginPage : AppCompatActivity() {
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
             }
         })
+
 
         binding.proceedlayout.setOnClickListener {
 
@@ -274,9 +277,8 @@ class LoginPage : AppCompatActivity() {
 
             }
 
-
-
         }
+
 
         binding.pinview.addTextChangedListener(object : TextWatcher {
 
@@ -335,17 +337,20 @@ class LoginPage : AppCompatActivity() {
 
     fun hitApiForCheckOTPValidation() {
         var otp = binding.pinview.text.toString().trim()
+
         var request = ValidateOtpRequest(
             taskType = ConstantClass.validate,
             mobileOrEmail = LoginValue,
             otPType = login,
             otpCode = otp
         )
+        Log.d("OTPRequest", Gson().toJson(request))
 
         viewModel.checkOTPValidate(request).observe(this) { resource ->
             when(resource.apiStatus){
                 ApiStatus.SUCCESS -> {
                     val response = resource.data?.body()
+                     Log.d("OTPResponse", Gson().toJson(response))
                      binding.pinview.text?.clear()
                     if(response?.isSuccess!!){
                         hitApiForCustomerLoginDetails(LoginValue)
@@ -368,8 +373,7 @@ class LoginPage : AppCompatActivity() {
     }
 
     fun hitApiForReSendOTP(mobileOrmail: String) {
-        binding.otpsubtitle.text =
-            "${resources.getString(R.string.enter_the_otp_you_received_on)} ${mobileOrmail}"
+        binding.otpsubtitle.text = "${resources.getString(R.string.enter_the_otp_you_received_on)} ${mobileOrmail}"
 
         var request = SendOtpRequest(
             taskType = ConstantClass.send,
@@ -423,13 +427,15 @@ class LoginPage : AppCompatActivity() {
             otpCode = ""
         )
         LoginValue = mobileOrmail
+        Log.d("OTPRequest", Gson().toJson(request))
         viewModel.getsendOTPRequest(request).observe(this) { resource ->
             when (resource.apiStatus) {
                 ApiStatus.SUCCESS -> {
                     val response = resource.data?.body()
+                    Log.d("OTPResponse", Gson().toJson(response))
+
                     ConstantClass.dialog.dismiss()
-                    Toast.makeText(this, response?.returnMessage.toString(), Toast.LENGTH_LONG)
-                        .show()
+                    Toast.makeText(this, response?.returnMessage.toString(), Toast.LENGTH_LONG).show()
 
                     if (response?.isSuccess!!) {
                         binding.loginscreen.visibility = View.GONE
@@ -467,6 +473,7 @@ class LoginPage : AppCompatActivity() {
         var request = CustomerLoginDetailsRequest(
             loginId = mobileOrmail,
         )
+        Log.d("LoginRequest", Gson().toJson(request))
 
         viewModel.GetCustomerLoginDetailsReq(request).observe(this) { resource ->
             when (resource.apiStatus) {
@@ -580,8 +587,7 @@ class LoginPage : AppCompatActivity() {
 
                 ApiStatus.ERROR -> {
                     ConstantClass.dialog.dismiss()
-                    Toast.makeText(this, resource.message.toString() ?: "Error", Toast.LENGTH_SHORT)
-                        .show()
+                    Toast.makeText(this, resource.message.toString() ?: "Error", Toast.LENGTH_SHORT).show()
                     Log.d("busListError", resource.message.toString())
                 }
 
